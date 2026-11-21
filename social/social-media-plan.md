@@ -1,5 +1,7 @@
 # Social media plan — Jaisalmer Visit
 
+This November 14 draft is preserved as a content reference. Use strategy/roadmap.md for the current pilot cadence, channel priorities and Google Business Profile eligibility check. Use setup/owner-inputs.md for account access and media requirements. Audience counts and growth targets below describe the original planning assumptions.
+
 *14 Nov 2026. Starting point: Instagram 7 followers / 2 posts · YouTube 1 Short / 19 views · Facebook page new.*
 
 ## Is it worth it? Yes, for three reasons

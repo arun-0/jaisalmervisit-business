@@ -1,5 +1,7 @@
 # Brief for the jaisalmervisit.com engineer — search (SEO) changes
 
+The original brief below is retained for context. On 21 November the site release added 35 static guides, editable Markdown, homepage links, a generated 37-URL sitemap, accessible attraction photos and a partner list with one entry per eligible business. Manual article ad units are configurable but await confirmed unit IDs and publisher consent review. The current priorities and owner evidence are in strategy/roadmap.md and setup/owner-inputs.md. Full local fact checks and expanded guide copy remain editorial work.
+
 *Prepared 14 Nov 2026. Goal: more Google search traffic, which drives AdSense revenue.*
 
 ## The problem

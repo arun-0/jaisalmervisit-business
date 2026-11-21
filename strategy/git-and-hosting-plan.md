@@ -1,6 +1,6 @@
 # Source, hosting and recovery
 
-Updated 21 November 2026. The newest worklog entry records whether the custom domains have completed their DNS and certificate checks.
+Updated 21 November 2026. Both custom domains are active on Cloudflare Pages. The newest worklog entry records the deployed Git commit and final checks.
 
 ## Ownership and release
 
@@ -25,9 +25,11 @@ The original authoritative nameservers were `hugh.ns.cloudflare.com` and `stella
 | Name | Firebase rollback value | Pages target |
 |---|---|---|
 | Apex `@` | A, `199.36.158.100`, DNS only. Observed answer TTL 300 seconds. | Proxied CNAME to `jaisalmervisit.pages.dev`, Auto TTL |
-| `www` | CNAME, `visitjaisalmer-e3085.web.app`, DNS only. Observed answer TTL 300 seconds. | Proxied CNAME to `jaisalmervisit.pages.dev`, Auto TTL. Pages redirects www to the same path on the apex. |
+| `www` | CNAME, `visitjaisalmer-e3085.web.app`, DNS only. Observed answer TTL 300 seconds. | Proxied CNAME to `jaisalmervisit.pages.dev`, Auto TTL. A zone Single Redirect sends www to the same path on the apex with HTTP 301 and preserves the query string. |
 
 The DNS change applies to those two web records. The domain also has mail, verification and other infrastructure that must be managed on its own terms. A proxied apex usually resolves to Cloudflare IPs because Cloudflare flattens the CNAME. Validate the hostname in Pages and fetch a guide over HTTPS.
+
+The enabled zone rule is named `Canonical www to jaisalmervisit.com`, rule ID `1523b6041b544e42b2e1d735996cac00`. Its configuration is tracked in the site repository at `deploy/canonical-redirect.json`. Domain forwarding uses the zone rules engine because Pages `_redirects` supports path rules. HTTPS and the www redirect were checked with a guide path and campaign query parameters.
 
 For a bad static release, use the previous known-good Pages production deployment. To return service to Firebase, confirm the old Firebase homepage is reachable, then restore the two DNS-only records above. Recheck the apex homepage, www redirect, `/admin/`, `/ads.txt`, `/sitemap.xml` and public Firestore reads. During propagation, different resolvers can briefly show different versions. [Cloudflare custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/)
 
@@ -35,7 +37,7 @@ For a bad static release, use the previous known-good Pages production deploymen
 
 - Six original endpoints matched byte-for-byte between Firebase and the Cloudflare parity preview, including the homepage, privacy, admin, robots, ads and sitemap.
 - The guide release passed checks for 35 guide documents, 37 sitemap URLs, 14 referenced assets, a real 404, noindex on admin, a production canonical on each guide and page content without JavaScript. All 13 public attraction images returned HTTP 200.
-- A local DOM test using published data exercised the two-day planner and Camel Safari deep links, 13 attraction cards and five eligible partner entries. Firestore returned 13 places with the real production and preview referrers.
+- A local DOM test using published data exercised the two-day planner and Camel Safari deep links. Browser verification on a phone-sized viewport loaded 13 attraction photos, five eligible partner entries and eight transport services, selected the two-day itinerary, opened the fort map and displayed the provider form. An initial content request took about 2.5 seconds. The former 1.5-second startup limit was extended to eight seconds with request cancellation and regression checks for delayed, offline and stalled reads.
 - Admin sign-in, private uploads, live form submissions, ad fill, GA4 collection, Search Console indexing and business revenue need separate owner evidence. SMS is disabled in the source. The release preserved the Firebase rules and data.
 
 For the first two days, the owner can review sitemap processing, landing traffic, ad delivery, reported operator enquiries and actual admin sign-in. If a reader reports a problem, record the exact URL, time, device and symptom. Keep personal traveller details in the business inbox.

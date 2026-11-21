@@ -1,5 +1,7 @@
 # Setting up your Claude account for Jaisalmer Visit
 
+This is the original Claude setup reference. The current shared workflow, exact project paths, Sol model preference and task prompts are in setup/chatgpt-workflows.md. HANDOFF.md and WORKLOG.md hold the shared business state.
+
 You have two places to use Claude. Use each for what it is good at:
 
 | Where | Use it for |
