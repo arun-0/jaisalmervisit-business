@@ -4,17 +4,21 @@ For the first report, the owner can provide aggregate exports or screenshots. Re
 
 ## First packet
 
+For Phase 1, use the signed-in accounts and available reports first. One recent complete 28-day window is enough to start. The prior period helps when readily available. Request only the evidence needed for the selected revenue action. Firebase billing is handled, as confirmed by the owner on 21 November 2026.
+
 | Owner or source | What to supply | What it enables |
 |---|---|---|
 | Search Console | Domain property for jaisalmervisit.com, Performance exports by query and page for the last two comparable 28-day periods, and the indexing and sitemaps summaries. Read access or exports work for reporting. An owner or full user can submit the sitemap. | Search demand, coverage and a short list of pages to improve. |
 | GA4 | Property name, web stream, time zone and an aggregate landing-page plus source/medium report for the same windows. Viewer access suffices. Indicate any internal traffic or recent tag changes. | Traffic and engagement by entry page and source. |
 | AdSense | Aggregate page views, impressions, estimated earnings, page RPM, reporting currency, site approval and any relevant policy/consent notices. Share two or three approved display ad unit IDs only when the owner wants manual placements. | Distinguishes approved inventory from actual earnings and sets a baseline. |
-| Firebase and registrar | Confirmation of who owns the project, controls billing and receives alerts, who can restore data, who renews the domain and who is the backup contact. Confirm admin sign-in, authorised hostnames and key referrer restrictions with the engineer. | A recovery path for the directory, assets and forms. A budget alert is a notification, so choose its amount with the billing owner. |
-| Local editor | Preferred languages and tone, three frequent traveller questions, original photos/clips with usage rights, dates and sources for current hours, entry charges, closures, accessibility and pickup arrangements. | Three locally checked guides and an initial set of approved social drafts. |
+| Booking route, when selected | Existing approved affiliate account and link access, or one operator with agreed commercial terms. Confirm current inventory, fulfilment, attribution and completed-booking reporting. | One small conversion test with a known payment mechanism and an estimate of owner time. |
+| Local editor, when needed for a selected page | A fact or photo needed to improve that page, with a source or usage permission. | A targeted guide or conversion fix. Broader media production can wait for a later phase. |
 
 If the dashboards have different reporting delays, end both windows on the latest fully available common day. Use a redacted export in the local ignored `private/` or `reports/raw/` folder. Commit only aggregate findings and their date ranges.
 
 ## When a channel enters the pilot
+
+The social and inbox channels below are optional later inputs. Phase 1 can proceed through website monetisation and existing traffic.
 
 | Channel | Details or invitation | What the owner retains |
 |---|---|---|

@@ -13,7 +13,7 @@ The original November 5 website snapshot and November 20 handoff remain in the l
 
 ## Where to find the decisions
 
-- [Growth roadmap](strategy/roadmap.md) covers search, the directory revenue pilot, channel experiments, what to measure and potential automations.
+- [Growth roadmap](strategy/roadmap.md) defines the current 80/20 revenue phase, the three candidate quick wins, a comparison with the original seed plan and the criteria for moving to a later phase.
 - [Owner inputs](setup/owner-inputs.md) lists the first three dashboard exports, the local evidence needed for articles and the optional social and partner inputs.
 - [Working sessions](setup/chatgpt-workflows.md) gives the exact local project, app, model, effort, prompt and stop point for three repeatable tasks.
 - [Hosting and recovery](strategy/git-and-hosting-plan.md) records the two hosts, release procedure and website DNS fallback. Firebase still provides Firestore, authentication and Storage.

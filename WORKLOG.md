@@ -12,6 +12,20 @@ Format:
 
 ---
 
+## 2026-11-21 — Arun, 80/20 revenue-phase alignment
+
+**Done:** Reframed the master roadmap around additional net revenue from the existing site and audience with little recurring owner work. Compared the first imported Claude plan at `f68e2a5` with the work delivered since then, and added a major/minor change table. The crawlable pages, sitemap, partner cleanup and attraction descriptions are completed seed recommendations.
+
+The next phase selects at most three opportunities. Candidates are ad-eligible page coverage, one self-service booking route using an approved programme or existing commercial partner, and small improvements to the few pages with the best commercial evidence. The provisional owner-time assumption is a short weekly review of about 15 minutes. Broad social publishing, bulk content and a new automation stack enter the later backlog unless evidence supports a particularly inexpensive opportunity.
+
+A source check confirmed that the homepage has the AdSense publisher loader while all 35 generated guides omit it under the current empty manual-slot configuration. The next session should assess approval, eligible traffic and settings before choosing an integration or experiment. This is a concrete candidate for monetisation work, with income still unmeasured.
+
+Replaced the blanket Sol/Extra High recommendation with a task-specific recommendation of GPT-6.2 Sol at Medium for the bounded revenue audit and implementation proposal. Updated the six-part setup and copy-paste prompt. Firebase billing is handled, as confirmed by the owner, and has been removed from current outstanding actions.
+
+**Waiting on:** Only the account evidence, commercial programme/partner access or local facts required for the selected Phase 1 action. Use available signed-in sessions first.
+
+**Next:** The six-part revenue-session setup, exact prompt, implementation follow-up and stop point are in `setup/chatgpt-workflows.md`. The current phase and exit criteria are in `strategy/roadmap.md`.
+
 ## 2026-11-21 — Arun, GitHub import and Cloudflare release
 
 **Done:** Read the top-level handoff and the technical, growth and social plans. Created private repositories under arun-0 for the site and business materials. Preserved the supplied source and plan snapshots as the first commits. The original archives, transcript and private assistant memory remain in the local seed directory. GitHub required the account's no-reply email for these checkouts.

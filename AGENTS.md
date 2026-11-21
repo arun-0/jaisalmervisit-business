@@ -12,6 +12,8 @@ Jaisalmer Visit is a mobile-first Jaisalmer guide and local provider directory. 
 
 Rank work by likely revenue, traveller usefulness and owner time. Use local evidence for prices, opening hours, access, images and bookings. Make dates and sources clear. Explain choices plainly.
 
+The active phase is the 80/20 revenue plan in strategy/roadmap.md. Select a few improvements to existing traffic and pages with little recurring owner work. Firebase billing is handled, as confirmed by the owner on 21 November 2026. Recommend the model and reasoning effort for each task.
+
 ## Authority and privacy
 
 Draft first. Every post, outbound message, contact with an operator, payment, ad or account-settings change needs explicit owner approval. Production hosting and DNS releases need explicit authorisation for the named domain. Give each person a named invitation when ongoing access is needed. Keep passwords, OTPs, card or banking details, tokens, private visitor data and transcript archives outside Git and chat.
