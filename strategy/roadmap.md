@@ -24,6 +24,8 @@ GA4 records 176 sessions, 403 views and 43 active users for 24 October–20 Nove
 
 Priorities are owner identity verification and ads.txt follow-up, Search Console ownership/sitemap setup, one approved Viator affiliate route, and the tested commercial guide/analytics release. The independent guide Auto ads switch is prepared but stays OFF pending account, content and regional consent review. The owner asked us to prepare the affiliate route; no affiliate account or paid operator terms have been supplied. Read the audit for inventory candidates, sensitivity calculations, effort trade-offs and the concrete approval queue.
 
+The owner-approved guide/analytics release is now live (site PR 6, main 2939ebb). Search Console URL-prefix ownership is verified using the retained HTML file (PR 7, main c427046), and the existing sitemap has been submitted. Initial sitemap processing shows Couldn't fetch, while Search Console’s live URL test confirms that the sitemap is available to Google. The audit/worklog distinguish confirmed fetch availability from pending sitemap processing. No guide ad expansion or affiliate link is active yet.
+
 ## Initial opportunity areas
 
 | Candidate | Smallest useful action | Evidence and owner effort | Decision |

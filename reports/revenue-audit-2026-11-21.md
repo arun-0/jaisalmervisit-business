@@ -1,5 +1,15 @@
 # Revenue audit and next actions — 21 November 2026
 
+## Rollout update — owner-approved publication and Search Console
+
+The owner approved the tested release and Search Console setup in chat. PR 6 is merged; main 2939ebb and Actions run 44947673883 published the commercial guide and analytics changes successfully. PR 7/main c427046 and successful run 44947905108 add Google's ownership file. Both deployed releases passed checks for all 35 guides, 37 sitemap URLs and 14 assets. Guide Auto ads remains OFF.
+
+The business account now owns the verified URL-prefix property https://jaisalmervisit.com/. HTML file verification succeeded; retain public/google10227309e0228ef3.html in future builds. No DNS, credential or user-access change was required. The earlier access gap below is historical.
+
+Google confirmed sitemap submission, then initially reported Couldn't fetch with no specific cause. The public 200 application/xml response matches the committed sitemap. Search Console’s live URL test of the sitemap at 20:48 GMT returned “URL is available to Google” and “Page can be indexed”. This confirms a real Google live fetch, rather than only a simulated user agent. The Sitemaps table still showed Couldn’t fetch on revisiting; performance/indexing reports are also processing. Sitemap processing remains unresolved and should be checked after Google updates it, without repeatedly resubmitting unchanged XML. No indexing request was made for the XML file. Do not describe the sitemap as successfully processed or its URLs as indexed until Google reports that.
+
+[Search Console property](https://search.google.com/search-console?resource_id=https%3A%2F%2Fjaisalmervisit.com%2F) · [Sitemaps](https://search.google.com/search-console/sitemaps?resource_id=https%3A%2F%2Fjaisalmervisit.com%2F)
+
 ## Recommendation
 
 Fix the account obstacles, create a working search-discovery route and launch one self-service affiliate route. The current measured audience is small: optimise for a few completed bookings and qualified visits, rather than spending heavily on ad layout experiments or a booking backend. The owner asked us to prepare the affiliate route; no existing approved programme or paid referral agreement has been supplied.
@@ -104,5 +114,5 @@ Review early technical delivery as soon as activation changes settle. Compare tr
 - Regression checks pass for Auto ads/manual-slot independence, consent-default ordering, analytics withdrawal/re-acceptance and UI source isolation. Existing delayed/offline/stalled public-feed checks pass.
 - Mobile browser check at 390×844: no horizontal overflow; safari deep link opened live local contact options, Sam map opened its location popup, and Add Your Service opened the form without submission.
 - Branch CI succeeded: https://github.com/arun-0/jaisalmervisit-site/actions/runs/44946521402.
-- Site review: https://github.com/arun-0/jaisalmervisit-site/pull/6 (draft).
-- Production publication requires the owner's concrete release approval. No production change, paid link, account setting, operator contact, DNS change or identity submission has been made by this audit.
+- Site review: https://github.com/arun-0/jaisalmervisit-site/pull/6 (merged after explicit owner approval).
+- The initially reviewed batch was published after explicit owner approval; see the rollout update above. No paid affiliate link, ad-account setting, operator contact, DNS change or identity submission has been made.

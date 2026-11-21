@@ -12,6 +12,22 @@ Format:
 
 ---
 
+## 2026-11-21 — Arun, approved revenue release and Search Console verification
+
+**Owner approval:** “Go ahead with Search Console setup and publish the tested site changes.” Approval covers this release and setup in the existing business Google account. Remaining commercial/ad decisions will be asked together in chat because the question popups disappeared before the owner could answer.
+
+**Done:** Merged [site PR 6](https://github.com/arun-0/jaisalmervisit-site/pull/6), publishing the tested commercial guide/analytics changes as main `2939ebb`. [Run 44947673883](https://github.com/arun-0/jaisalmervisit-site/actions/runs/44947673883) passed check and deploy. Production release checks passed for 35 guides, 37 sitemap URLs and 14 referenced assets. Guide Auto ads remains OFF; no affiliate account, advertising setting or live Firebase record changed.
+
+Added and verified Search Console URL-prefix property `https://jaisalmervisit.com/` under the existing signed-in business Google account using Google's downloaded HTML file. [Site PR 7](https://github.com/arun-0/jaisalmervisit-site/pull/7), main `c427046`, publishes `public/google10227309e0228ef3.html`. Keep that file in future releases to retain verification. [Run 44947905108](https://github.com/arun-0/jaisalmervisit-site/actions/runs/44947905108) passed check and deploy. The served file matches Google's download exactly after Cloudflare's same-origin extensionless redirect. No DNS changes, additional users or credentials were required.
+
+Submitted `https://jaisalmervisit.com/sitemap.xml`; Google displayed “Sitemap submitted successfully”. The initial report then showed “Couldn't fetch”/“Sitemap could not be read”, with no specific cause. Public Googlebot-user-agent fetch returns 200 application/xml and the exact 37-URL sitemap; this simulation alone is not proof of Google's access. Search Console performance/indexing reports are processing data. Search Console live URL testing of the sitemap at 20:48 GMT returned “URL is available to Google” and “Page can be indexed”. The Sitemaps report still showed Couldn’t fetch when revisited; actual live Google access is confirmed, while sitemap processing remains unresolved. Do not request indexing of the XML file or repeatedly resubmit unchanged XML. A future report check is needed; no recurring automation was created.
+
+**Waiting on:** Google's sitemap processing and the owner's AdSense identity status; the next affiliate/CMP decisions. Do not equate submission, live fetch or publication with indexing, bookings or earnings.
+
+**Next:** Use the current state update in `reports/revenue-audit-2026-11-21.md`. Follow up on sitemap processing without repeatedly resubmitting unchanged XML. Continue the revenue work with the owner's answers in this chat.
+
+**WhatsApp handover:** “The safari guide and analytics fixes are live; Search Console ownership is verified and the sitemap is submitted, with Google's processing status under check. Next decisions are AdSense identity status and the affiliate pilot.”
+
 ## 2026-11-21 — Arun, revenue account audit and tested conversion preview
 
 **Done:** Used the signed-in business Chrome session to inspect AdSense and GA4, checked Search Console access and public ads.txt delivery, and researched current affiliate programme mechanics and Jaisalmer inventory. The detailed aggregate baseline, ranked opportunities, sensitivity calculations, proposed CMP rollout and affiliate pilot are in `reports/revenue-audit-2026-11-21.md`.
