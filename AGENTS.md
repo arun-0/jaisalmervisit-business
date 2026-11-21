@@ -12,10 +12,12 @@ Jaisalmer Visit is a mobile-first Jaisalmer guide and local provider directory. 
 
 Rank work by likely revenue, traveller usefulness and owner time. Use local evidence for prices, opening hours, access, images and bookings. Make dates and sources clear. Explain choices plainly.
 
-The active phase is the 80/20 revenue plan in strategy/roadmap.md. Select a few improvements to existing traffic and pages with little recurring owner work. Firebase billing is handled, as confirmed by the owner on 21 November 2026. Recommend the model and reasoning effort for each task.
+The active phase is the 80/20 revenue plan in strategy/roadmap.md. Prioritise opportunities by expected revenue, effort and learning, and continue useful work as the opportunity develops. The owner is available for early review and iterative decisions. Automation is the long-term vision and can grow alongside a practical pilot. Page counts, numbers of changes, review minutes and perfect measurement are not fixed limits or prerequisites. Firebase billing is handled, as confirmed by the owner on 21 November 2026. Recommend the model and reasoning effort for each task.
 
 ## Authority and privacy
 
 Draft first. Every post, outbound message, contact with an operator, payment, ad or account-settings change needs explicit owner approval. Production hosting and DNS releases need explicit authorisation for the named domain. Give each person a named invitation when ongoing access is needed. Keep passwords, OTPs, card or banking details, tokens, private visitor data and transcript archives outside Git and chat.
+
+Apply authorisations already given and carry the agreed work through. Approval can cover a concrete batch of actions. Ask again when a materially different decision or an applicable action-time rule requires it. Keep preparing and verifying independent work while the owner reviews.
 
 The current plan is in strategy/roadmap.md. The owner-supplied evidence checklist and app/model recommendations are in setup/. Historical Claude setup and social drafts remain available as references. Both collaborators should be able to recover the business context from the repositories.

@@ -4,9 +4,9 @@ Updated 21 November 2026 after the owner chose an 80/20 phase focused on revenue
 
 ## Current phase
 
-The objective is additional net revenue from the existing site and audience, with a small amount of owner time. Rank opportunities by credible monthly revenue after direct costs, setup effort, ongoing owner minutes and confidence in the evidence. These estimates guide a decision. Actual revenue will establish the winner.
+The objective is to grow net revenue by prioritising the opportunities with the strongest expected return on effort. Rank opportunities by credible revenue after direct costs, setup work, ongoing owner involvement and confidence in the evidence. Use available evidence and reasonable assumptions to act, then improve the estimates as results arrive.
 
-Use the existing website, directory and accounts. The initial operating assumption is a maximum of three small changes and about 15 minutes of owner review per week after setup. Record the owner time needed for approvals, local facts and partner administration separately from engineering time. Adjust that assumption with the owner if an otherwise attractive opportunity needs more time.
+Start with the existing website, directory and accounts where they offer quick returns, and pursue additional opportunities when their expected return justifies the effort. The owner is available for review at the beginning and as the work evolves. Keep effort visible as a trade-off. The former limits of three changes and 15 minutes of review were introduced by the assistant and have been withdrawn. Automation is the long-term direction and can grow alongside useful manual work during the pilot.
 
 The first business commit, `f68e2a5`, already identified the core opportunities. Crawlable pages, ad monetisation, affiliate links and directory income remain useful parts of that plan. The current phase changes their sequence and the amount of recurring work.
 
@@ -16,37 +16,37 @@ The site and business materials have separate private repositories. The live Clo
 
 A code check on 21 November found the AdSense publisher loader in the homepage. It is absent from all 35 generated guide pages. The guide builder emits it only when manual slots are configured and the article meets the builder's length threshold. The current slot list is empty. This is the first monetisation candidate to inspect. It does not establish the value of those guide visits or the site's current ad approval.
 
-## The three candidates, in provisional order
+## Initial opportunity areas
 
 | Candidate | Smallest useful action | Evidence and owner effort | Decision |
 |---|---|---|---|
 | Recover earnings from existing ad-eligible visits | Inspect AdSense approval, actual delivery, page traffic, exclusions and the guide-template loader. Prepare the smallest suitable integration for eligible guides. Assess Auto ads and one controlled experiment if the account and content support them. | Existing account access, current settings and a recent complete reporting window. Engineering should handle integration and verification. The owner approves the concrete ad setting or publication. | Ship a demonstrated missing integration or test one supported setting. Compare total earnings, page RPM and usability. Low traffic means the absolute upside may be small. [Google setup](https://support.google.com/adsense/answer/9261307) · [Auto ads experiments](https://support.google.com/adsense/answer/9726342) |
-| Add a booking path on the pages closest to a purchase | Select one approved affiliate programme or an existing partner with agreed terms. Put a relevant booking link on at most three existing pages where visitor intent and bookable inventory match. Use clear commercial disclosure and link-level tracking. | Confirm programme access, current Jaisalmer inventory, attribution, commission, cancellations and who handles the booking. Prefer traveller self-service and supplier fulfilment when available. | Use completed bookings and realised commission as the outcome. A commission is contingent on the programme's rules and the activity taking place. Affiliate links were already in the seed plan. [Programme mechanics example](https://partner.getyourguide.support/hc/en-us/articles/13981068165917-Our-partner-program) |
-| Improve the few pages with the best revenue opportunity | Use available search and landing-page data to choose up to three existing pages. Improve a weak title, missing answer, internal link or relevant booking action. Check sitemap submission and coverage once. | Recent queries, page visits and a short local fact check where needed. Page selection follows evidence. Sam, Khuri, camps, safaris and itineraries are candidates until their demand is measured. | Measure qualified visits and earnings from those pages. Expand only after seeing demand or a specific fix worth making. Sitemap submission helps discovery and cannot guarantee indexing. [Google Search Central](https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview) |
+| Add booking paths on pages closest to a purchase | Use approved affiliate programmes or partners with agreed terms. Add relevant booking actions wherever visitor intent and bookable inventory match. Use clear commercial disclosure and link-level tracking. | Confirm programme access, current Jaisalmer inventory, attribution, commission, cancellations and who handles the booking. Compare self-service and direct referrals by return and handling effort. | Use completed bookings and realised commission as the outcome. A commission is contingent on the programme's rules and the activity taking place. Affiliate links were already in the seed plan. [Programme mechanics example](https://partner.getyourguide.support/hc/en-us/articles/13981068165917-Our-partner-program) |
+| Improve pages with commercial opportunity | Use available search, landing-page data and traveller needs to put page improvements in priority order. Fix weak titles, missing answers, internal links and relevant booking actions. Check sitemap submission and coverage. | Recent queries, page visits and local facts help prioritisation. Sam, Khuri, camps, safaris and itineraries are candidates until their demand is measured. Make reasonable, reversible improvements while collecting more evidence. | Measure qualified visits and earnings as the changes mature. Extend useful improvements across the site when justified. Sitemap submission helps discovery and cannot guarantee indexing. [Google Search Central](https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview) |
 
 This order is provisional. If AdSense is healthy and there is strong purchase intent, the booking path may be the best first change. If an existing operator is already willing to pay for a clearly labelled placement and can fulfil the service, compare that opportunity with the affiliate option. Record the sales, collection and support time before choosing.
 
-A direct referral pilot belongs in this phase only when an existing relationship, agreed terms, attribution and supplier fulfilment make it inexpensive to operate. An owner-run WhatsApp booking desk brings response, availability, cancellation and reconciliation work. Account for those hours in its ranking.
+A direct referral pilot can be worthwhile when its revenue justifies relationship-building and fulfilment work. An owner-run WhatsApp booking desk brings response, availability, cancellation and reconciliation work. Account for those hours in its ranking and automate repeated steps as the process becomes clearer.
 
-## One short audit, then action
+## Audit, implement and review together
 
 Use signed-in sessions and authorised connectors first. Gather a recent complete 28-day view where available. Add the prior period when readily accessible. Useful inputs are earnings, ad delivery and page views from AdSense, search queries and coverage from Search Console, and landing-page traffic from GA4. A missing dashboard is an information gap. Continue independent work and request only the access needed for the chosen action.
 
-Return one short ranked table with up to three recommendations. For each, record the observed problem, proposed change, traffic affected, revenue mechanism, an honest range or unknown, one-time setup, ongoing owner minutes, required approval and review date. Show the assumptions behind numerical estimates.
+Keep a ranked opportunity queue. For each item being considered, record the observed problem, proposed change, traffic affected, revenue mechanism, an honest range or unknown, setup work, ongoing owner involvement and the next useful review point. Share an initial recommendation early, incorporate feedback, and continue authorised work. Show the assumptions behind numerical estimates. A provisional estimate is useful when the evidence is incomplete.
 
 For an ad estimate, calculate eligible monthly views divided by 1,000, multiplied by observed incremental RPM. For bookings, use relevant visits multiplied by outbound click rate, completed-booking conversion and net commission. Keep these as sensitivity calculations until there is account data. Account for partner fees, cancellations and collection effort. Use the resulting total revenue and owner minutes together.
 
 Prepare the code or configuration and verify the preview before the final publication or account-setting approval. Reuse the working release process. Revenue-affecting defects justify immediate diagnosis. A larger backend audit is outside this phase unless a selected action depends on it.
 
-## Review and exit criteria
+## Review and progression
 
 Review the shipped changes after roughly 14–28 days. Ad experiments or booking outcomes may need longer to mature. State whether traffic and completed outcomes are sufficient for a useful conclusion. A calendar date alone cannot establish an uplift.
 
-Continue Phase 1 while a small, evidence-backed improvement fits the owner-time assumption. Move to the next phase when the selected quick fixes are operational, their revenue or lack of revenue is understood, and the remaining attractive work needs sustained traffic acquisition, content production, sales or customer handling. If traffic is insufficient, record the smallest acquisition experiment as the next-phase decision.
+Continue pursuing worthwhile revenue opportunities and adapt the work with the owner. Phase names help set priorities and organise progress. They do not impose a hard stop. When growth work such as acquisition, content, sales or customer handling offers the best next return, bring it forward and explain the trade-off. Carry lessons from the quick wins into that work while improving existing revenue routes.
 
-The later backlog contains broad social publishing, 40–60 articles, Hindi expansion, new X/Threads channels, a sales programme for directory placements and a custom automation stack. An existing asset can enter Phase 1 when it has a specific revenue case and little added work. There is no standing posting quota in Phase 1.
+The opportunity queue also contains social publishing, further guides, Hindi expansion, X/Threads, directory sales and automation. Prioritise these when there is a useful revenue case. Avoid creating activity quotas simply to fill a calendar.
 
-The recurring workflow is one brief review of earnings, relevant visits, outbound booking clicks, confirmed outcomes and owner time. Add a scheduled report only after this manual view is useful and the input access is reliable. [Scheduled tasks](https://learn.chatgpt.com/docs/automations?surface=app)
+Review earnings, relevant visits, commercial clicks, confirmed outcomes and owner involvement at intervals useful to the decisions. Automate steps when doing so saves work or improves reliability, including during the pilot. Early manual work is acceptable while the process evolves. A scheduled task requires the owner's scheduling request and the access needed to run it. [Scheduled tasks](https://learn.chatgpt.com/docs/automations?surface=app)
 
 ## Changes from the seed plan
 
@@ -62,7 +62,7 @@ Compared with the imported plan at `f68e2a5` and the engineer source at `65451b9
 | Major operational addition | Optional Git-connected Cloudflare move. | Completed using Direct Upload after the Git integration failed. GitHub CI checks code, while the verified release script publishes a specific commit. Billing is handled by the owner. |
 | Minor factual corrections | Fourteen attractions, SMS verification active and a new Google Business Profile as a quick win. | The public feed had 13 places. SMS is disabled. Check in-person business eligibility if a profile becomes relevant. [Google eligibility](https://support.google.com/business/answer/13763036) |
 | Additional engineering | The first-visit content deadline and visited guide-link contrast were outside the seed brief. | Fixed after browser verification exposed the two issues. |
-| Workflow correction | Every task was assigned Sol at Extra High based on a temporary session request. | Recommend model and effort for each task. The bounded revenue audit starts with GPT-6.2 Sol at Medium. [Model selection](https://learn.chatgpt.com/docs/model-selection) |
+| Workflow correction | Every task was assigned Sol at Extra High based on a temporary session request. | Recommend model and effort for each task. The revenue work starts with GPT-6.2 Sol at Medium. [Model selection](https://learn.chatgpt.com/docs/model-selection) |
 
 ## Working materials
 

@@ -12,6 +12,16 @@ Format:
 
 ---
 
+## 2026-11-21 — Arun, revenue priorities without arbitrary caps
+
+**Done:** Corrected the assistant-introduced limits in the roadmap, working instructions and next-session prompt. The earlier caps on page counts, numbers of changes and weekly owner-review minutes have been withdrawn. The owner is available for early review and iterative decisions. Use the 80/20 principle to prioritise expected return on effort, keep useful work moving, and evolve the approach as opportunities and results develop.
+
+Automation remains the ultimate direction. Practical manual work can help the pilot earn money and learn while repeatable steps become automated. Review intervals inform decisions and phase labels organise progress. They do not require perfect measurement or impose a hard stop. The earlier worklog entry describes the superseded constraints.
+
+**Waiting on:** The concrete evidence, access or decision needed for the next selected action.
+
+**Next:** The revised working-session setup and prompt are in `setup/chatgpt-workflows.md`. Continue the agreed revenue work with early feedback and record a handover when appropriate.
+
 ## 2026-11-21 — Arun, 80/20 revenue-phase alignment
 
 **Done:** Reframed the master roadmap around additional net revenue from the existing site and audience with little recurring owner work. Compared the first imported Claude plan at `f68e2a5` with the work delivered since then, and added a major/minor change table. The crawlable pages, sitemap, partner cleanup and attraction descriptions are completed seed recommendations.
