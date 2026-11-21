@@ -65,6 +65,23 @@ GetYourGuide is a fallback if its approved account or particular inventory is st
 
 Before account submission, the owner supplies legal payee/account type, business site, contact and country, intended promotion method and the payment/tax information requested by the programme, privately. Do not infer these from the domain or publish them in Git. No affiliate account was created and no terms accepted in this session.
 
+### Application draft
+
+Use the following only where the actual application asks for a site description or promotion plan. The owner supplies legal identity, country, contact, tax and payment fields directly to the programme and reviews its current terms. Acceptance and availability in the owner's country have not been verified.
+
+> Jaisalmer Visit is an independent English-language travel guide and local provider directory at https://jaisalmervisit.com. We publish destination guides, itineraries and activity-planning information. We plan to place clearly disclosed, contextual affiliate links in relevant Jaisalmer safari and itinerary guides, directing visitors to matching experiences on Viator. Visitors would complete reservations and payment on the booking platform. We will not collect booking payments or imply that an enquiry confirms a reservation.
+
+If asked for audience size, give the measured period and limitations: 43 active users, 176 sessions and 403 views in GA4 for 24 October–20 November 2026; consent-limited measurement, internal testing not verified/excluded. Do not substitute targets for actual traffic. No application has been submitted.
+
+| Setup item | Current revenue unit |
+|---|---|
+| Chat | Same chat for review, approval, release and acceptance checks; avoid copying account evidence into a new chat. |
+| App | Local Codex for repository work; owner uses signed-in Chrome for private identity/application submissions. |
+| Project | Jaisalmer Visit, C:\dev\ai\ghanu-jaisalmer-visit; site and business are separate sibling repositories. |
+| Model | GPT-6.2 Sol, Medium for implementation and evidence reconciliation; a practical recommendation, not a measured cost optimum. Manual document submission needs no model. |
+| Exact prompt | “Continue from business/reports/revenue-audit-2026-11-21.md and the newest WORKLOG entry. Apply only my stated approvals, verify the resulting release/account state and update both records.” |
+| Follow-up and stop | Approve/revise site PR 6; approve/defer Search Console setup; provide identity status and programme approval/links. Stop before unapproved production/account changes, new access grants, legal acceptance or private document submission. Continue independent authorised work. |
+
 ## Proposed ad/consent rollout
 
 Google's [European regulations guidance](https://support.google.com/adsense/answer/13554116?hl=en-GB) and [non-personalised ads guidance](https://support.google.com/adsense/answer/9007336) explain why the existing “non-personalised” wording and denied Consent Mode defaults alone do not establish a suitable regional advertising consent setup.
@@ -87,4 +104,5 @@ Review early technical delivery as soon as activation changes settle. Compare tr
 - Regression checks pass for Auto ads/manual-slot independence, consent-default ordering, analytics withdrawal/re-acceptance and UI source isolation. Existing delayed/offline/stalled public-feed checks pass.
 - Mobile browser check at 390×844: no horizontal overflow; safari deep link opened live local contact options, Sam map opened its location popup, and Add Your Service opened the form without submission.
 - Branch CI succeeded: https://github.com/arun-0/jaisalmervisit-site/actions/runs/44946521402.
+- Site review: https://github.com/arun-0/jaisalmervisit-site/pull/6 (draft).
 - Production publication requires the owner's concrete release approval. No production change, paid link, account setting, operator contact, DNS change or identity submission has been made by this audit.

@@ -20,13 +20,13 @@ AdSense site approval is Ready and Auto ads is ON, but Last 30 days shows zero v
 
 Prepared site branch `revenue/desert-conversion-and-ad-readiness`, commit `75c628f`, and pushed it. It improves Sam, Khuri, camel-safari and jeep-safari content/enquiry paths, records guide-link actions via the consent-controlled analytics channel, fixes withdrawal/re-acceptance and isolates internal event source values. A separate guide Auto ads switch is implemented but OFF. No manual units, affiliate IDs, ad/account settings or live Firebase records were changed.
 
-Preview: https://a0f36b6a.jaisalmervisit.pages.dev. Local and deployed release checks pass for 35 guides, 37 sitemap URLs and 14 assets. New monetisation/consent/source checks and the existing delayed/offline/stalled-feed checks pass. Branch CI run 44946521402 succeeded. A phone-sized browser check opened the safari sheet with local contacts, Sam map popup and provider form; no enquiry or form was submitted.
+Site review is [draft PR 6](https://github.com/arun-0/jaisalmervisit-site/pull/6). Preview: https://a0f36b6a.jaisalmervisit.pages.dev. Local and deployed release checks pass for 35 guides, 37 sitemap URLs and 14 assets. New monetisation/consent/source checks and the existing delayed/offline/stalled-feed checks pass. Branch CI run 44946521402 succeeded. A phone-sized browser check opened the safari sheet with local contacts, Sam map popup and provider form; no enquiry or form was submitted.
 
 **Owner input:** “you prepare” for the affiliate route. Owner requested the AdSense identity-verification URL, steps and document checklist; these were supplied with Google's current guidance. Identity submission remains private with the payee/payments administrator.
 
 **Waiting on:** Concrete approval to publish site commit 75c628f to jaisalmervisit.com; approval to add/verify its Search Console URL-prefix property and submit the existing sitemap; owner identity-verification status. The Viator application and any legal terms/account creation remain for owner review. Do not enable guide ads until the account/content/consent rollout is reviewed.
 
-**Next:** Continue this revenue unit with owner feedback and apply existing approvals. Approval/publishing status and PR links will be appended here when resolved. No recurring automation or operator outreach has been authorised.
+**Next:** Continue this revenue unit with owner feedback and apply existing approvals. The draft PR and preview are ready for review. Update publication/account status here when approvals are resolved. No recurring automation or operator outreach has been authorised.
 
 **WhatsApp handover:** “Revenue audit found AdSense activation/crawl gaps and very small measured traffic; safari guide and analytics fixes are tested in preview, while Viator and Search Console setup are prepared for review.”
 
