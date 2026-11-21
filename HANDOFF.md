@@ -1,5 +1,7 @@
 # Jaisalmer Visit handoff
 
+Current work order: read the newest [WORKLOG](WORKLOG.md) entry and [roadmap priority todo list](strategy/roadmap.md#current-priority-todo-list). Owner-facing decision explanations are in [explanations/](explanations/affiliate-pilot-explanation.md) and the directory reference describes both. Follow the highest-value unblocked action; do not repeat completed release/Search Console setup or treat recommendations as approvals.
+
 Updated 21 November 2026. This is the business checkout for the owner and his brother. The [worklog](WORKLOG.md) records what actually shipped, the outstanding owner input and the next decision.
 
 ## Shared working copies

@@ -10,6 +10,12 @@ Google confirmed sitemap submission, then initially reported Couldn't fetch with
 
 [Search Console property](https://search.google.com/search-console?resource_id=https%3A%2F%2Fjaisalmervisit.com%2F) · [Sitemaps](https://search.google.com/search-console/sitemaps?resource_id=https%3A%2F%2Fjaisalmervisit.com%2F)
 
+## Owner update and current work order
+
+On 21 November the owner confirmed AdSense identity verification is Not started and plans to involve a cousin on 22 November. The owner requested explanations before deciding on Viator and personalised ads. Neither is an approval to enrol, accept terms or change ad settings. Read [the affiliate explanation](../explanations/affiliate-pilot-explanation.md) and [the advertising/consent explanation](../explanations/advertising-consent-explanation.md).
+
+The authoritative live todo order is now [the roadmap priority queue](../strategy/roadmap.md#current-priority-todo-list). The initial opportunity table below preserves the audit's earlier decision context; completed site/Search Console work must not be treated as pending setup.
+
 ## Recommendation
 
 Fix the account obstacles, create a working search-discovery route and launch one self-service affiliate route. The current measured audience is small: optimise for a few completed bookings and qualified visits, rather than spending heavily on ad layout experiments or a booking backend. The owner asked us to prepare the affiliate route; no existing approved programme or paid referral agreement has been supplied.
@@ -39,7 +45,7 @@ GA4 Session source/medium rows (all 176 sessions): file / (not set) 37; (direct)
 
 Internal names matching code event origins are strong evidence of attribution pollution. The analytics adapter forwarded its internal `source` field unchanged. The patch forwards that field as `interaction_source`. This is a preventative fix supported by the dashboard/code match; a controlled GA4 verification after publication is still needed to confirm the historical cause. Historical data will not be repaired. It also stops forwarding after analytics consent withdrawal and correctly re-grants consent when visitors accept again.
 
-## Ranked opportunity queue
+## Ranked opportunity queue at the initial audit
 
 Effort figures below are planning estimates, not limits or promises. Rankings can change with owner feedback and results.
 

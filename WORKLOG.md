@@ -12,6 +12,22 @@ Format:
 
 ---
 
+## 2026-11-21 — Arun, owner explanations and authoritative priority todo queue
+
+**Owner input:** AdSense identity verification is Not started; the owner plans to involve a cousin tomorrow, 22 November 2026. The owner asked how the Viator affiliate pilot works, what is recommended, and whether personalised-ad consent would put visitors off. The owner requested saved explanations and an ordered record of all pending work. These questions do not approve affiliate enrolment or advertising changes.
+
+**Done:** Created `explanations/affiliate-pilot-explanation.md` and `explanations/advertising-consent-explanation.md`, with current primary-source links, practical examples, recommendations and six-part follow-up setup. Clarified that non-personalised ads can still require storage consent, limited ads are a different treatment, CMP friction is unmeasured here, and the guide Auto ads switch is separate from homepage advertising.
+
+Made `strategy/roadmap.md#current-priority-todo-list` the authoritative live queue. It orders identity/account activation; consent/homepage delivery; affiliate pilot decision and route; sitemap-processing follow-up; eligible guide ad rollout; measurement validation; qualified acquisition/content/listing quality; and useful automation/reviews. Each row states current status, dependencies, next action and completion evidence. Owner-dependent work must not block independent preparation. Guide ads OFF and the unresolved sitemap report are explicit todos, not orphan status notes. Marked the audit's older queue as historical and removed stale current-roadmap claims that Search Console/release setup was still undone.
+
+Updated owner inputs and HANDOFF to point to the queue, and dir-structure.md for 17 documents across six subfolders, including both explanations. No production, affiliate, ad/consent setting, operator contact, access invitation or scheduling change was made in this documentation turn.
+
+**Waiting on:** Owner/payments-admin identity submission/status; owner understanding and decisions on the first affiliate programme and advertising/consent preference. Google's sitemap processing needs a later report check; the successful live fetch does not close that processing issue.
+
+**Next:** Read the roadmap queue, take the highest-value unblocked work, and update its status and this handover from evidence. Do not ask the owner to supply private identity/payment documents in chat or assume the cousin's own ID is appropriate for the account payee.
+
+**WhatsApp handover:** “Explanations for Viator and ad consent are saved; the roadmap now has the ordered todo queue. Identity help is planned with cousin on 22 November; affiliate/ad choices and sitemap processing remain pending.”
+
 ## 2026-11-21 — Arun, approved revenue release and Search Console verification
 
 **Owner approval:** “Go ahead with Search Console setup and publish the tested site changes.” Approval covers this release and setup in the existing business Google account. Remaining commercial/ad decisions will be asked together in chat because the question popups disappeared before the owner could answer.

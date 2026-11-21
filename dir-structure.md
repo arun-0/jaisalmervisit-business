@@ -6,7 +6,7 @@ Local folder — `C:\dev\ai\ghanu-jaisalmer-visit\business`
 
 Private repository — [arun-0/jaisalmervisit-business](https://github.com/arun-0/jaisalmervisit-business)
 
-This folder contains 15 documents, including this reference, across the root and five subfolders. It holds the shared plans, instructions, drafts and handover records for the owner and brother.
+This folder contains 17 documents, including this reference, across the root and six subfolders. It holds the shared plans, instructions, drafts and handover records for the owner and brother.
 
 ## Directory tree
 
@@ -18,6 +18,9 @@ business/
 ├── README.txt
 ├── WORKLOG.md
 ├── dir-structure.md
+├── explanations/
+│   ├── affiliate-pilot-explanation.md
+│   └── advertising-consent-explanation.md
 ├── reports/
 │   └── revenue-audit-2026-11-21.md
 ├── content/
@@ -65,11 +68,20 @@ This folder describes how work is organised and what access or evidence a select
 | [claude-account-setup.md](setup/claude-account-setup.md) | Preserves the initial Claude setup instructions, including profile text, project instructions, suggested connectors, draft/publish responsibilities and working habits. | Historical reference. Its original paths, product details and workflow assumptions may differ from the current setup. The opening note points to the current working-session document. |
 | [owner-inputs.md](setup/owner-inputs.md) | Lists useful Search Console, GA4 and AdSense evidence, commercial partner or affiliate inputs, and local facts. Also covers optional Instagram, Facebook, YouTube, WhatsApp, Threads, X, Gmail, newsletter and Drive inputs. | A reference for requesting the access or evidence needed for the action being pursued. Available signed-in sessions and reports come first. The full list is not a prerequisite for starting useful work. |
 
+## explanations/
+
+Owner-facing explanations of the pending business choices. These are decision aids, not approval records or the authoritative task queue.
+
+| File | Function | Current role |
+|---|---|---|
+| [affiliate-pilot-explanation.md](explanations/affiliate-pilot-explanation.md) | Explains the Viator referral flow, responsibilities, commission example, effort/risks and recommended link-based pilot. | Helps the owner decide whether to proceed; links to the prepared brief and current roadmap queue. No signup or terms acceptance is implied. |
+| [advertising-consent-explanation.md](explanations/advertising-consent-explanation.md) | Explains personalised, non-personalised and limited ads, storage consent, CMP choices, visitor friction and what guide ads being OFF means. | Supports the ad/consent decision and a mobile-reviewed proposal. Advertising settings remain unchanged. |
+
 ## reports/
 
 | File | Function | Current role |
 |---|---|---|
-| [revenue-audit-2026-11-21.md](reports/revenue-audit-2026-11-21.md) | Records the signed-in AdSense/GA4 baseline, search-access gap, live delivery check, ranked revenue actions, affiliate inventory and mechanics, proposed consent rollout, sensitivity estimates and release validation. | The evidence and concrete review queue for the revenue pilot. Contains aggregate findings only. |
+| [revenue-audit-2026-11-21.md](reports/revenue-audit-2026-11-21.md) | Records the signed-in AdSense/GA4 baseline, search-access gap, live delivery check, ranked revenue actions, affiliate inventory and mechanics, proposed consent rollout, sensitivity estimates and release validation. | The audit and rollout evidence for the revenue pilot; the roadmap now owns the live priority queue. Contains aggregate findings only. |
 
 ## social/
 
@@ -86,7 +98,7 @@ This folder holds the current business priorities and technical operating record
 
 | File | Function | Current role |
 |---|---|---|
-| [roadmap.md](strategy/roadmap.md) | Sets revenue priorities and records what has shipped. Covers ad coverage, booking paths, commercial page improvements, evidence and revenue calculations, owner review, progression and automation. Includes a major/minor comparison with the original seed plan. | The master business plan. It prioritises expected return on effort while allowing the work to develop through feedback and results. |
+| [roadmap.md](strategy/roadmap.md) | Sets revenue priorities and records what has shipped. Covers ad coverage, booking paths, commercial page improvements, evidence and revenue calculations, owner review, progression and automation. Includes a major/minor comparison with the original seed plan. | The master business plan and authoritative ordered todo queue. It records dependencies, owner commitments, guide-ad meaning, current status and evidence needed to close each item; take the highest-value unblocked action and re-rank as evidence changes. |
 | [git-and-hosting-plan.md](strategy/git-and-hosting-plan.md) | Records repository baselines, Cloudflare Pages, the Firebase backend and fallback, automatic deployment from site main, credential names and permissions, domain records, the www redirect, recovery procedures and completed checks. | The technical operating and recovery reference. It describes the approved deployment credential without storing its secret value. |
 
 ## Relationship to the rest of the project

@@ -2,6 +2,13 @@
 
 For the first report, the owner can provide aggregate exports or screenshots. Record the account or property name, date range, timezone and currency with each export. Remove visitor contact details. The brother can use his own invited account. Keep passwords, OTPs, billing identifiers, tokens, customer messages and the handoff transcript outside Git.
 
+## Current owner commitments and decisions — 21 November 2026
+
+- AdSense identity verification is **Not started**. The owner plans to involve a cousin on **22 November 2026**. The actual payee/payments administrator submits privately; report status only. No new invitation or reminder is implied.
+- The Viator affiliate application and ad-personalisation choice are **not approved/decided**. The owner requested explanations first; read [affiliate pilot](../explanations/affiliate-pilot-explanation.md) and [advertising/consent](../explanations/advertising-consent-explanation.md) before requesting a decision.
+- The tested site changes are **published**, Search Console ownership is **verified**, and the sitemap is **submitted**. Sitemap processing still needs a later check despite a successful Google live fetch. Do not request these completed approvals again.
+- The authoritative next-action order and independent work are in [the roadmap priority queue](../strategy/roadmap.md#current-priority-todo-list). This checklist supplies evidence for the chosen action, not a prerequisite to all progress.
+
 ## First packet
 
 For Phase 1, use the signed-in accounts and available reports first. One recent complete 28-day window is enough to start. The prior period helps when readily available. Request only the evidence needed for the selected revenue action. Firebase billing is handled, as confirmed by the owner on 21 November 2026.
