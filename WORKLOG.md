@@ -12,6 +12,20 @@ Format:
 
 ---
 
+## 2026-11-21 — Arun, automatic deployment from GitHub
+
+**Done:** At the owner's request, configured GitHub Actions to run the website checks on pushes and pull requests and automatically publish successful main pushes to the existing Cloudflare Pages project. Production jobs run in sequence and skip a stale main revision. Each upload records the Git commit and is followed by checks against the deployment URL and jaisalmervisit.com.
+
+Used the signed-in Cloudflare and GitHub Chrome session to create the specifically approved account token `jaisalmervisit-site-github-deploy`, with Pages Write permission and no expiry, and store it as the encrypted repository secret `CLOUDFLARE_API_TOKEN`. The account ID is a repository variable. Cloudflare scopes this Pages permission to the account. The token value was copied directly into GitHub and kept out of the repository and worklog.
+
+Site PR 5 is merged. Main commit `b64961b` triggered GitHub Actions run `44943644703`. Both check and deploy jobs succeeded. Cloudflare production deployment `4aab1457` records that same commit, and the public release passed checks for 35 guides, 37 sitemap URLs and 14 referenced assets.
+
+The previous entry records the owner's correction to the revenue plan. The updated plan and prompt use opportunity-based priorities, early review, continued authorised work and progressive automation. Earlier page-count, change-count and review-time caps are superseded.
+
+**Waiting on:** The evidence, access or commercial decision needed for the next revenue opportunity.
+
+**Next:** Use the shared plan and working-session record for the revenue work. A merge or push to site main now publishes automatically after checks pass.
+
 ## 2026-11-21 — Arun, revenue priorities without arbitrary caps
 
 **Done:** Corrected the assistant-introduced limits in the roadmap, working instructions and next-session prompt. The earlier caps on page counts, numbers of changes and weekly owner-review minutes have been withdrawn. The owner is available for early review and iterative decisions. Use the 80/20 principle to prioritise expected return on effort, keep useful work moving, and evolve the approach as opportunities and results develop.
