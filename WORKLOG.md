@@ -12,6 +12,14 @@ Format:
 
 ---
 
+## 2026-11-21 — Arun, business directory reference and next-session guidance
+
+**Done:** Created `dir-structure.md` with a checked directory tree, the function and current role of all 14 business documents including the reference itself, the four subfolders and the relationship to the site and original seed materials. Added a link from HANDOFF.md. Distinguished current operating records from the original technical, social and Claude setup references.
+
+**Waiting on:** The account evidence or commercial decision needed for the revenue opportunity being pursued.
+
+**Next:** Start the revenue work in a fresh local Codex chat in the existing Jaisalmer Visit project, using the six-part setup and prompt in `setup/chatgpt-workflows.md`. Keep its review, implementation and evolving decisions in that same chat while useful.
+
 ## 2026-11-21 — Arun, automatic deployment from GitHub
 
 **Done:** At the owner's request, configured GitHub Actions to run the website checks on pushes and pull requests and automatically publish successful main pushes to the existing Cloudflare Pages project. Production jobs run in sequence and skip a stale main revision. Each upload records the Git commit and is followed by checks against the deployment URL and jaisalmervisit.com.

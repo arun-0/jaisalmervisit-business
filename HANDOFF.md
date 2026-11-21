@@ -13,6 +13,7 @@ The original November 5 website snapshot and November 20 handoff remain in the l
 
 ## Where to find the decisions
 
+- [Directory reference](dir-structure.md) explains every current business document and subfolder.
 - [Growth roadmap](strategy/roadmap.md) defines the current revenue priorities, starting opportunities, a comparison with the original seed plan and how work evolves through owner feedback and results.
 - [Owner inputs](setup/owner-inputs.md) lists the first three dashboard exports, the local evidence needed for articles and the optional social and partner inputs.
 - [Working sessions](setup/chatgpt-workflows.md) gives the local project, app, model recommendation, revenue prompt and review/handover approach.
