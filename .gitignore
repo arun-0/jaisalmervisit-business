@@ -1,0 +1,7 @@
+session-transcript/
+claude-memory/
+*.zip
+.env*
+private/
+reports/raw/
+.DS_Store
