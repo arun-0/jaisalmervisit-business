@@ -16,6 +16,14 @@ The site and business materials have separate private repositories. The live Clo
 
 A code check on 21 November found the AdSense publisher loader in the homepage. It is absent from all 35 generated guide pages. The guide builder emits it only when manual slots are configured and the article meets the builder's length threshold. The current slot list is empty. This is the first monetisation candidate to inspect. It does not establish the value of those guide visits or the site's current ad approval.
 
+## Evidence and action queue — 21 November revenue audit
+
+The [revenue audit](../reports/revenue-audit-2026-11-21.md) now supplies the account baseline and ranked next actions. AdSense marks the site Ready and Auto ads ON, but reports zero delivery/earnings in its Last 30 days view. Identity verification is Not started, ads.txt is Not found despite valid public responses, and no Google European regulations message is published. One live homepage visit produced an unfilled AdSense slot. Do not equate the loader or an ad preview with income.
+
+GA4 records 176 sessions, 403 views and 43 active users for 24 October–20 November. Acquisition attribution is suspect because internal event origins appear as source/medium values; the prepared site patch isolates these and fixes consent withdrawal/re-acceptance. No Search Console property is accessible in the signed-in business account. The 35 guides launched after this baseline window, so their commercial priority is based on visitor intent until demand is observed.
+
+Priorities are owner identity verification and ads.txt follow-up, Search Console ownership/sitemap setup, one approved Viator affiliate route, and the tested commercial guide/analytics release. The independent guide Auto ads switch is prepared but stays OFF pending account, content and regional consent review. The owner asked us to prepare the affiliate route; no affiliate account or paid operator terms have been supplied. Read the audit for inventory candidates, sensitivity calculations, effort trade-offs and the concrete approval queue.
+
 ## Initial opportunity areas
 
 | Candidate | Smallest useful action | Evidence and owner effort | Decision |

@@ -12,6 +12,24 @@ Format:
 
 ---
 
+## 2026-11-21 — Arun, revenue account audit and tested conversion preview
+
+**Done:** Used the signed-in business Chrome session to inspect AdSense and GA4, checked Search Console access and public ads.txt delivery, and researched current affiliate programme mechanics and Jaisalmer inventory. The detailed aggregate baseline, ranked opportunities, sensitivity calculations, proposed CMP rollout and affiliate pilot are in `reports/revenue-audit-2026-11-21.md`.
+
+AdSense site approval is Ready and Auto ads is ON, but Last 30 days shows zero views/impressions/earnings. Identity verification is Not started; no Google European regulations message is published. ads.txt recheck failed although the exact required seller line returns 200 over the public domain and redirects. A fresh homepage browser visit produced an unfilled ad slot. GA4 24 October–20 November records 176 sessions, 403 views and 43 active users, with suspect attribution to internal UI source names. Search Console has no accessible property in the signed-in account.
+
+Prepared site branch `revenue/desert-conversion-and-ad-readiness`, commit `75c628f`, and pushed it. It improves Sam, Khuri, camel-safari and jeep-safari content/enquiry paths, records guide-link actions via the consent-controlled analytics channel, fixes withdrawal/re-acceptance and isolates internal event source values. A separate guide Auto ads switch is implemented but OFF. No manual units, affiliate IDs, ad/account settings or live Firebase records were changed.
+
+Preview: https://a0f36b6a.jaisalmervisit.pages.dev. Local and deployed release checks pass for 35 guides, 37 sitemap URLs and 14 assets. New monetisation/consent/source checks and the existing delayed/offline/stalled-feed checks pass. Branch CI run 44946521402 succeeded. A phone-sized browser check opened the safari sheet with local contacts, Sam map popup and provider form; no enquiry or form was submitted.
+
+**Owner input:** “you prepare” for the affiliate route. Owner requested the AdSense identity-verification URL, steps and document checklist; these were supplied with Google's current guidance. Identity submission remains private with the payee/payments administrator.
+
+**Waiting on:** Concrete approval to publish site commit 75c628f to jaisalmervisit.com; approval to add/verify its Search Console URL-prefix property and submit the existing sitemap; owner identity-verification status. The Viator application and any legal terms/account creation remain for owner review. Do not enable guide ads until the account/content/consent rollout is reviewed.
+
+**Next:** Continue this revenue unit with owner feedback and apply existing approvals. Approval/publishing status and PR links will be appended here when resolved. No recurring automation or operator outreach has been authorised.
+
+**WhatsApp handover:** “Revenue audit found AdSense activation/crawl gaps and very small measured traffic; safari guide and analytics fixes are tested in preview, while Viator and Search Console setup are prepared for review.”
+
 ## 2026-11-21 — Arun, business directory reference and next-session guidance
 
 **Done:** Created `dir-structure.md` with a checked directory tree, the function and current role of all 14 business documents including the reference itself, the four subfolders and the relationship to the site and original seed materials. Added a link from HANDOFF.md. Distinguished current operating records from the original technical, social and Claude setup references.

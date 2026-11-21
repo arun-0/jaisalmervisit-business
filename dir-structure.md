@@ -6,7 +6,7 @@ Local folder — `C:\dev\ai\ghanu-jaisalmer-visit\business`
 
 Private repository — [arun-0/jaisalmervisit-business](https://github.com/arun-0/jaisalmervisit-business)
 
-This folder contains 14 documents, including this reference, across the root and four subfolders. It holds the shared plans, instructions, drafts and handover records for the owner and brother.
+This folder contains 15 documents, including this reference, across the root and five subfolders. It holds the shared plans, instructions, drafts and handover records for the owner and brother.
 
 ## Directory tree
 
@@ -18,6 +18,8 @@ business/
 ├── README.txt
 ├── WORKLOG.md
 ├── dir-structure.md
+├── reports/
+│   └── revenue-audit-2026-11-21.md
 ├── content/
 │   └── engineer-brief.md
 ├── setup/
@@ -63,6 +65,12 @@ This folder describes how work is organised and what access or evidence a select
 | [claude-account-setup.md](setup/claude-account-setup.md) | Preserves the initial Claude setup instructions, including profile text, project instructions, suggested connectors, draft/publish responsibilities and working habits. | Historical reference. Its original paths, product details and workflow assumptions may differ from the current setup. The opening note points to the current working-session document. |
 | [owner-inputs.md](setup/owner-inputs.md) | Lists useful Search Console, GA4 and AdSense evidence, commercial partner or affiliate inputs, and local facts. Also covers optional Instagram, Facebook, YouTube, WhatsApp, Threads, X, Gmail, newsletter and Drive inputs. | A reference for requesting the access or evidence needed for the action being pursued. Available signed-in sessions and reports come first. The full list is not a prerequisite for starting useful work. |
 
+## reports/
+
+| File | Function | Current role |
+|---|---|---|
+| [revenue-audit-2026-11-21.md](reports/revenue-audit-2026-11-21.md) | Records the signed-in AdSense/GA4 baseline, search-access gap, live delivery check, ranked revenue actions, affiliate inventory and mechanics, proposed consent rollout, sensitivity estimates and release validation. | The evidence and concrete review queue for the revenue pilot. Contains aggregate findings only. |
+
 ## social/
 
 This folder contains the original social strategy and reusable draft material.
@@ -91,6 +99,6 @@ The project root is `C:\dev\ai\ghanu-jaisalmer-visit`.
 | `site\` | Website code, published guide source, generated HTML, assets, checks and deployment workflow. A successful push to that repository's main branch publishes the website through GitHub Actions. |
 | `seed-resource\` | Original supplied website and business handoff snapshots, archives and private reference material. |
 
-Documents mention future reporting and private-input locations such as `reports/`, `reports/raw/` and `private/`. These folders are absent from the current business inventory. They can be created when the work produces the relevant material.
+`reports/` now holds the aggregate revenue audit. Raw exports and private-input locations such as `reports/raw/` and `private/` remain absent; create ignored local storage only when needed and keep private visitor or account material out of Git.
 
 The current business record is distributed by function. `AGENTS.md` holds working instructions, `roadmap.md` holds priorities, `WORKLOG.md` records events and decisions, and `chatgpt-workflows.md` supplies the reusable session setup. Historical briefs and drafts preserve their original context, with current directions supplied by those shared records.
