@@ -1,72 +1,41 @@
-# Git, source code and hosting plan
+# Source, hosting and recovery
 
-*20 Nov 2026. Written for the brother driving the technical work.*
+Updated 21 November 2026. The newest worklog entry records whether the custom domains have completed their DNS and certificate checks.
 
-## What the live site actually runs on (checked 20 Nov 2026)
-- **Static hosting:** Firebase Hosting (Fastly `x-served-by` headers, `/__/firebase/init.json` responds). Cloudflare is the DNS provider but is **not proxying** (no `cf-*` headers), so the records are DNS-only and point at Firebase.
-- **Backend (stays on Firebase regardless of where hosting goes):**
-  - Firestore: listings, reviews, announcements.
-  - Cloud Storage: admin image/audio uploads. Needs the **Blaze (pay-as-you-go) plan**, so a billing account is attached. Probably the engineer's.
-  - Firebase Auth: provider "Add Your Service" phone verification. `authDomain` is `visitjaisalmer-e3085.firebaseapp.com`, so auth does **not** depend on where the HTML is hosted.
-  - An admin panel under `/admin`.
-- Firebase web API key is restricted to the site's domains, so any new preview domain must be added to its allowed referrers.
-- No Cloud Functions calls seen from the front end. Confirm in the repo (`functions/` folder).
+## Ownership and release
 
-**Consequence:** the real lock-in is the **Firebase project and its billing account**, not the hosting. Fixing ownership comes before anything else.
-
----
-
-## Step 0 — Ownership first (owner + engineer, ~1 day)
-| Account | Action |
+| Asset | Current arrangement |
 |---|---|
-| **Firebase / Google Cloud project `visitjaisalmer-e3085`** | Engineer adds the owner's Google account as **Owner** (Google Cloud console → IAM). Then move billing to the owner's own billing account and set a **budget alert** (e.g. ₹1,000/month). Engineer can stay as Editor while still working on it. |
-| **GitHub** | Create a free **GitHub organisation** (e.g. `jaisalmervisit`) **owned by the owner's GitHub account** (create one with the business Gmail). Brother = admin member. Engineer = collaborator on the site repo only. |
-| **Cloudflare** | Don't share the owner's login. Owner invites the brother: Manage Account → Members, role limited to DNS + Pages (or Administrator, temporarily). Remove or reduce when done. |
-| **Everything** | 2-step verification on, owner's email as account owner: domain registrar, Cloudflare, Google (AdSense, Analytics, Search Console, Firebase), GitHub, Meta. |
-| **Engineer agreement** | Short written note: code and data belong to the owner. The handover must include everything: `firebase.json`, `.firebaserc`, `firestore.rules`, `storage.rules`, indexes, admin panel, any `functions/`, build scripts, and **git history** if they have it. |
+| Website source | Private [arun-0/jaisalmervisit-site](https://github.com/arun-0/jaisalmervisit-site). Baseline `65451b9` imports the engineer’s November 5 snapshot. No earlier Git history was supplied. |
+| Business materials | Private [arun-0/jaisalmervisit-business](https://github.com/arun-0/jaisalmervisit-business). Baseline `f68e2a5` imports the November 20 plan and drafts. Private transcripts, personal memory and exports stay local. |
+| Static frontend | Cloudflare Pages project `jaisalmervisit`, production branch `main`. Direct Upload publishes the tracked public directory with its Git commit. [Pages production](https://jaisalmervisit.pages.dev) |
+| Backend | Firebase project `visitjaisalmer-e3085` serves published visitor data, receives provider enquiries and reviews, authenticates admins, and stores uploaded photos and audio. Ownership and billing transfer are owner/engineer follow-ups. |
+| Recovery origin | Original Firebase Hosting deployment, checked for HTTP 200 on 21 November. Keep it available at least through the initial monitoring period. [Firebase fallback](https://visitjaisalmer-e3085.web.app) |
 
-## Step 1 — Git on this laptop
-- Install Git for Windows and GitHub CLI: `winget install Git.Git GitHub.cli`.
-- `gh auth login` (the brother signs in himself in the browser; Claude never needs the password).
-- Move the workspace out of the folder named `scratch` to something permanent before `git init`, e.g. `Desktop\jaisalmervisit\business` and `Desktop\jaisalmervisit\site`.
+The site’s first release was reviewed, checked and merged in [site PR 1](https://github.com/arun-0/jaisalmervisit-site/pull/1). The checked-out GitHub identity is the owner’s named account. The two checkouts use its GitHub no-reply address because GitHub rejected the first push under the global private-email setting.
 
-## Step 2 — Repo 1: `business` (private): shared work
-- Contents: today's workspace (`CLAUDE.md`, `WORKLOG.md`, `strategy/`, `social/`, `content/`, `setup/`, `HANDOFF.md`).
-- Workflow: pull → work → Claude updates `WORKLOG.md` → commit + push → WhatsApp "done". The other person's Claude runs `git pull` and summarises `git log`/diff since their last session.
-- Owner doesn't need to learn Git: in either Claude session, say "get latest" / "save and share my work" and Claude runs pull / commit / push.
-- Commit straight to `main`; two people taking turns don't need branches here.
-- Add a rule to `CLAUDE.md`: pull at start, commit + push at end.
+The Cloudflare GitHub app installation could see the private repository, but branch lookup failed in the dashboard and the Pages API returned 8000011. Direct Upload provided a verified deployment. GitHub Actions performs the release checks on pushes and pull requests. Publishing is an explicit, separate step. The site release script supports both previews and production. The latter requires a clean checkout at the current GitHub main commit. [Release instructions](https://github.com/arun-0/jaisalmervisit-site/blob/main/README.md)
 
-## Step 3 — Repo 2: `site` (private): website source
-- Best: engineer pushes their **full git history** into the new repo. Fallback: import the zip as the first commit ("Import from engineer, <date>").
-- Before the first commit: check for secrets (service-account JSON, `.env`, private keys) and add a `.gitignore` (`node_modules/`, `.firebase/`, `*.log`, `.env*`, service-account files). The Firebase web config is public by design; service-account keys are not.
-- Add a `README.md`: how to run locally (it already supports the Firebase emulators), how to build, how to deploy.
-- Branch rule: `main` = what's live; changes go via a branch + pull request, so the owner (or Claude) can review and Cloudflare builds a preview URL first.
-- Keep it **separate from `business`**: different people (the engineer shouldn't see business strategy), different history, deploys on its own.
+If automatic publication becomes worthwhile, reuse the release checks and add an owner-approved deployment job with a dedicated Pages-only credential and controlled production environment. The project can use CI-based Direct Upload. Switching to native Git integration would require a new Pages project and a tested domain transfer. [Cloudflare Direct Upload](https://developers.cloudflare.com/pages/get-started/direct-upload/)
 
-## Step 4 — Hosting: move the static site to Cloudflare Pages (optional, recommended *after* Steps 0–3)
-**Why move:** deploys on every push to `main` with no Firebase login, a free preview URL per pull request, free, and it's where the DNS already is. It also suits the planned SEO rebuild (pre-rendered page per place).
-**Why it's safe:** only the HTML/JS/CSS moves. Firestore, Storage and Auth stay on Firebase unchanged.
+## Cutover and rollback
 
-1. Build the site locally from the repo and confirm it matches production.
-2. Port `firebase.json` hosting config (redirects, rewrites, headers, clean URLs, `/admin`) to Pages `_redirects` / `_headers`. Check whether the code reads `/__/firebase/init.json` (Firebase-only URL); if so, switch it to the inline config.
-3. Create the Pages project connected to the `site` repo. Deploy to `*.pages.dev`.
-4. For the preview domain to work, add `*.pages.dev` (or the specific project domain) to the **API key's HTTP referrer list** (Google Cloud console → Credentials), and to **Firebase Auth → Authorized domains** if phone verification is tested there.
-5. Test on the preview: listings load, reviews, map, audio guide, Add Your Service (phone OTP), admin login and uploads, `ads.txt`, `robots.txt`, `sitemap.xml`, AdSense script loads.
-6. **Before switching:** export the current DNS records in Cloudflare (screenshot or export) so rollback is one edit.
-7. Pages → Custom domains → add `jaisalmervisit.com` and `www`. Cloudflare rewrites the DNS records itself.
-   **No nameserver change is needed:** nameservers already point to Cloudflare.
-8. Watch for 48 hours: site, AdSense, Analytics, Search Console. Rollback = restore the old DNS records. Keep Firebase Hosting deployed (untouched) for a month as the fallback.
-9. Later, optionally turn on Cloudflare proxy features (caching, analytics). Test AdSense after any change.
+The original authoritative nameservers were `hugh.ns.cloudflare.com` and `stella.ns.cloudflare.com`. On 21 November, before cutover, public DNS and response headers confirmed the two Firebase web targets below.
 
-## Order and rough effort
-| # | Step | Who | Effort |
-|---|---|---|---|
-| 0 | Ownership: Firebase owner + billing, GitHub org, Cloudflare member | Owner + engineer | 1 day (mostly waiting on engineer) |
-| 1 | Git + gh on laptop, move folders | Brother + Claude | 30 min |
-| 2 | `business` repo | Claude | 15 min |
-| 3 | `site` repo with history, secrets check, README | Brother + Claude | 1–2 h |
-| 4 | Cloudflare Pages move | Brother + Claude | Half a day + 48 h watch |
-| 5 | Then the SEO rebuild from `content/engineer-brief.md` | Brother/engineer + Claude | Ongoing |
+| Name | Firebase rollback value | Pages target |
+|---|---|---|
+| Apex `@` | A, `199.36.158.100`, DNS only. Observed answer TTL 300 seconds. | Proxied CNAME to `jaisalmervisit.pages.dev`, Auto TTL |
+| `www` | CNAME, `visitjaisalmer-e3085.web.app`, DNS only. Observed answer TTL 300 seconds. | Proxied CNAME to `jaisalmervisit.pages.dev`, Auto TTL. Pages redirects www to the same path on the apex. |
 
-**Don't combine the hosting move and the SEO rebuild in one change.** Move first with zero changes, confirm nothing broke, then start the SEO work.
+The DNS change applies to those two web records. The domain also has mail, verification and other infrastructure that must be managed on its own terms. A proxied apex usually resolves to Cloudflare IPs because Cloudflare flattens the CNAME. Validate the hostname in Pages and fetch a guide over HTTPS.
+
+For a bad static release, use the previous known-good Pages production deployment. To return service to Firebase, confirm the old Firebase homepage is reachable, then restore the two DNS-only records above. Recheck the apex homepage, www redirect, `/admin/`, `/ads.txt`, `/sitemap.xml` and public Firestore reads. During propagation, different resolvers can briefly show different versions. [Cloudflare custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/)
+
+## What was tested
+
+- Six original endpoints matched byte-for-byte between Firebase and the Cloudflare parity preview, including the homepage, privacy, admin, robots, ads and sitemap.
+- The guide release passed checks for 35 guide documents, 37 sitemap URLs, 14 referenced assets, a real 404, noindex on admin, a production canonical on each guide and page content without JavaScript. All 13 public attraction images returned HTTP 200.
+- A local DOM test using published data exercised the two-day planner and Camel Safari deep links, 13 attraction cards and five eligible partner entries. Firestore returned 13 places with the real production and preview referrers.
+- Admin sign-in, private uploads, live form submissions, ad fill, GA4 collection, Search Console indexing and business revenue need separate owner evidence. SMS is disabled in the source. The release preserved the Firebase rules and data.
+
+For the first two days, the owner can review sitemap processing, landing traffic, ad delivery, reported operator enquiries and actual admin sign-in. If a reader reports a problem, record the exact URL, time, device and symptom. Keep personal traveller details in the business inbox.

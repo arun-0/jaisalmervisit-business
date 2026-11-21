@@ -1,0 +1,16 @@
+# Working sessions for the owner and brother
+
+Choose one bounded outcome per chat. The two Git repositories hold the shared record. The owner can use ChatGPT Work for editorial drafts and the brother can use local Codex for versioned reports and releases. These model choices are practical recommendations for the stated task. Actual quota use depends on inputs, tools and retries. [OpenAI’s November 17 release](https://learn.chatgpt.com/docs/whats-new/gpt-62-astra-sol) · [Model selection](https://learn.chatgpt.com/docs/model-selection)
+
+| Setup | First performance baseline | A social draft batch | A complex site regression |
+|---|---|---|---|
+| Chat | Fresh chat after gathering exports. Keep corrections and acceptance in it. | Fresh chat for one campaign week. Keep the local fact check there. | Fresh chat for one reproducible incident. Keep the fix and acceptance there. |
+| App | Codex desktop, local | ChatGPT Work desktop, local files or attached approved copies | Codex desktop, local |
+| Project and full path | Jaisalmer Visit business · `C:\dev\ai\ghanu-jaisalmer-visit\business` | Jaisalmer Visit business · `C:\dev\ai\ghanu-jaisalmer-visit\business` | Jaisalmer Visit site · `C:\dev\ai\ghanu-jaisalmer-visit\site` |
+| Model and effort | GPT-6.2 Sol · Medium for reconciling sources | GPT-6.2 Sol · Light for adapting approved copy | GPT-6.2 Astra · Medium for an incident crossing the browser, Cloudflare and Firebase |
+| Exact prompt | “Read AGENTS.md, WORKLOG.md and strategy/roadmap.md. Use my aggregate Search Console, GA4 and AdSense exports to compare two equal complete periods. Draft one report in reports/ with source windows, missing data, three opportunities and one test. Stop for my review.” | “Use the approved guide, footage list and local fact sheet I supplied. Draft one Reel and one carousel with a link to the relevant guide. Flag claims that lack evidence. Save the drafts for review and stop before publishing.” | “Read AGENTS.md and README.md. Reproduce the reported failure locally or on a preview. Trace it across the affected services, propose the smallest fix, and verify the affected workflow. Stop at a reviewed preview.” |
+| Follow-up and stop | “Apply my factual corrections and save the approved aggregate report and worklog to GitHub. Stop after verifying the push.” | “Apply these corrections and return the final drafts with media credits. Stop at the approval copy.” | “Show me the preview evidence, production impact and rollback point. Stop until I approve deployment.” |
+
+Work can prepare drafts from supplied files or authorised connected sources. Git commits and deploy checks belong in the local site or business checkout. The first reporting cycle can use exports. A Gmail or Drive connection does not provide access to Search Console, GA4 or AdSense by itself. [ChatGPT Work](https://learn.chatgpt.com/docs/get-started-with-work)
+
+A later scheduled draft should specify the report period, input location, one output filename, owner approval and what to do when a source is missing. Choose the execution environment only after confirming it can actually access the input files or connected account. [Scheduled tasks](https://learn.chatgpt.com/docs/automations?surface=app)
