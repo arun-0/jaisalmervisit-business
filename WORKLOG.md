@@ -2,6 +2,12 @@
 
 Newest first. Live statuses, owner commitments, approvals and follow-up dates belong in [TODO.md](TODO.md); this file records significant events and their meaning. [Project dashboard](dir-structure.md) · [Dated account evidence](reports/revenue-audit-2026-11-21.md).
 
+## 22 November 2026 — Identity verification claim cross-checked
+
+**Changed / why:** Owner reported the cousin/site owner completed verification before this project. Rechecked the existing signed-in AdSense publisher against the website seller line, Home, Verification check and the linked India payments account. Live UI still reports identity Needs attention, a payments hold and a 21 December serving deadline. [Dated observations and limits](reports/adsense-identity-check-2026-11-22.md).
+
+**Meaning / correction:** The earlier Not started wording was directly present in AdSense; it does not prove no previous verification happened. The current notice and owner's report conflict. T01 now asks to reconcile service/account/prior success, superseding the old planned cousin-help step, rather than request duplicate documents. Detailed payment/serving status is more precise than treating identity as the established sole reason for zero delivery. Updated the owner checklist/dashboard; no private submission, account change or ad activation occurred. Local document/anchor and whitespace checks passed before commit/push.
+
 ## 22 November 2026 — Human continuation path and redundant handoff removed
 
 **Changed / why:** Corrected the earlier wording: the human continuation path includes dir-structure, TODO and NEXT-PROMPT. The first two answer a status-only check; NEXT-PROMPT supplies the exact setup for advancing with AI. Owner actions in TODO also advance the project independently. Removed business/HANDOFF.md because it only repeated entry links and had no unique content or current inbound document links. README remains the conventional repository discovery pointer; the five primary records collectively provide handoff.
