@@ -16,7 +16,6 @@ Statuses: **Ready** = executable; **In progress** = started; **Owner action** = 
 | T06 · 6 | **Ready — Measurement validation.** Code shipped, fresh outcomes not checked. | Check stream/timezone, country/device mix, consented acquisition/events and internal traffic; reconcile clicks with completed outcomes, net commission/payout and effort. | Validate [audience assumptions](strategy/roadmap.md#audience-and-market); historical GA4 isn't repaired. Register dimensions only if useful. |
 | T07 · 7 | **Ready — Qualified acquisition/content quality.** New-guide demand unmeasured. | Use clean available demand data. Fix Sam campfire-image/dunes-alt mismatch; check mixed/weak listings and local facts before commercial featuring. | Re-rank by expected return. No quotas, unapproved live-record changes or operator outreach. |
 | T08 · 8 | **Backlog — Useful review/automation.** Revenue uplift not established. | Review mature outcomes; automate repeated link checks/reporting/reconciliation when useful. | No schedule without a scheduling request. Dates/counts are not hard stop rules. |
-| T09 · Owner request | **Waiting — Cousin invitation acceptance.** Both repositories public; owner-only main rules active; write invitations sent to `jaisalmer-visit`. | Cousin opens the direct invitation links in the [operating reference](strategy/hosting-operations.md#collaboration-and-main-branch-control), signed in as `jaisalmer-visit`, and accepts each. Then verify effective write permission while owner-only main remains active. [Configuration/evidence](strategy/hosting-operations.md#collaboration-and-main-branch-control). | Only `arun-0` can bypass main restrictions. Until accepted the cousin has public read access, not effective collaborator write access. Recheck on cousin/owner acceptance update; no repeated permission question or plan upgrade needed. |
 
 ## Approval ledger
 
@@ -26,12 +25,13 @@ Statuses: **Ready** = executable; **In progress** = started; **Owner action** = 
 | 22 Nov | “Go ahead with Viator and personalised ads … Prepare the setup for review” | Chosen directions and preparation authorised. Does not mean signup terms were accepted, private fields were furnished, a Google message was published or guide ads were enabled. |
 | 22 Nov | India-first audience direction | Audience direction accepted; the assumption and validation limits are maintained in [strategy](strategy/roadmap.md#audience-and-market). |
 | 22 Nov | Reorganise docs and add a universal documentation rule | Current business documentation cleanup and local Codex global guidance authorised. Other existing project repositories are not being rewritten in this task. |
-| 22 Nov | Grant cousin `jaisalmer-visit` read/write; owner-only main; then “make them public and do it” | Public visibility, active owner-only main restrictions and write invitations authorised and applied. Supersedes the earlier private/read-only route and plan blocker. Acceptance remains T09. No billing or ownership transfer performed. |
+| 22 Nov | Grant cousin `jaisalmer-visit` read/write; owner-only main; then “make them public and do it” | Public visibility, active owner-only main restrictions and write invitations authorised and applied. Supersedes the earlier private/read-only route and plan blocker. T09 completed after acceptance/effective-write verification. No billing or ownership transfer performed. |
 
 ## Recently completed
 
 | Result | Evidence |
 |---|---|
+| T09 — Public repositories, cousin write access and owner-only main | Both invitations accepted; effective write and sole `arun-0` main bypass verified on 22 Nov. [Trail](WORKLOG.md). |
 | Shared-record cleanup and entry/naming reassessment | Five top-level records, human continuation path including NEXT-PROMPT, redundant HANDOFF removed and links updated; [22 Nov trail](WORKLOG.md). Revenue task priorities and approvals unchanged. |
 | 35 crawlable guides, deployed site and automatic checked releases | WORKLOG milestone trail; technical commands in site README. |
 | Four commercial-guide improvements and analytics fixes | Site PR 6, main `2939ebb`; production checks passed. |

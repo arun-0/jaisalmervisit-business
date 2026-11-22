@@ -2,6 +2,12 @@
 
 Newest first. Live statuses, owner commitments, approvals and follow-up dates belong in [TODO.md](TODO.md); this file records significant events and their meaning. [Project dashboard](dir-structure.md) · [Dated account evidence](reports/revenue-audit-2026-11-21.md).
 
+## 22 November 2026 — Cousin invitations accepted and access verified
+
+**Observed / resolved:** Inspected existing OS Chrome: GitHub dashboard explicitly welcomed `jaisalmer-visit` while its bell showed no unread notifications. Direct business invitation navigation led to a push-access confirmation. Direct site invitation navigation showed the valid invitation and Accept invitation button despite the empty bell. This establishes that the notification bell was not a reliable acceptance entry point in this session; the underlying notification/email delivery cause was not established. No duplicate invitations or notification-setting changes were needed.
+
+**Verification / meaning:** Final authenticated owner-side API checks showed write permission for `jaisalmer-visit` on both repositories, with neither invitation pending. Rechecked both active exact-main rulesets: creation/update/deletion restricted, sole explicit `arun-0` user bypass. T09 is complete and moved to completed results; the owner dashboard no longer asks for acceptance. Cousin can contribute on topic branches and open PRs; only the owner updates/merges main. Document/anchor and diff checks passed before push; no application release was required.
+
 ## 22 November 2026 — Public repositories, owner-only main and cousin invitations
 
 **Decision / change:** Owner explicitly authorised making both repositories public to enable main restrictions without a paid upgrade. Applied public visibility, then active exact-main creation/update/deletion rules with only the explicit `arun-0` user able to bypass. Only after read-back verification, sent write invitations to `jaisalmer-visit` for both repositories. Invitations were pending at verification; no effective collaborator write access is claimed yet.
