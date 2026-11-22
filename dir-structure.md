@@ -61,7 +61,7 @@ The interactive homepage supplies maps, itineraries, audio, Tourist Mode and loc
 
 | View | Concise status / link |
 |---|---|
-| Done | Site foundation and latest guide/analytics changes published; Search Console ownership verified and sitemap submitted. [Trail](WORKLOG.md). |
+| Done | Site foundation and guide/analytics changes published; Search Console verified/submitted; records cleaned and setup review pack prepared. [Trail](WORKLOG.md). |
 | Your next actions | Complete AdSense identity with the correct payee; review Viator terms/signup/private profile; review the concrete ad setup when ready. [Exact owner checklist](setup/revenue-setup.md#owner-checklist). |
 | AI can move now | Prepare India-first affiliate placements and regional consent/notice changes; validate measurement and targeted content. [Ordered queue](TODO.md). |
 | Waiting / deliberately off | Sitemap processing unresolved; guide ads OFF pending the reviewed account/content/consent rollout; no affiliate account/paid links or saved CMP draft claimed. [T02–T05](TODO.md). |
