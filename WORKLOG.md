@@ -2,6 +2,12 @@
 
 Newest first. Live statuses, owner commitments, approvals and follow-up dates belong in [TODO.md](TODO.md); this file records significant events and their meaning. [Project dashboard](dir-structure.md) · [Dated account evidence](reports/revenue-audit-2026-11-21.md).
 
+## 22 November 2026 — Cousin repository access checked
+
+**Request / evidence:** Owner requested read access for cousin's GitHub account `jaisalmer-visit` to both private repositories. Authenticated GitHub API confirmed the account, both repositories owned by personal user `arun-0`, administrator capability for the current operator and no existing collaborator permission for the cousin. [GitHub's documented personal-repository roles](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/permission-levels-for-a-personal-account-repository) only allow collaborator read/write, not read-only.
+
+**Meaning / next condition:** No invitation, access expansion, ownership transfer or deployment change was made. T09 records the owner choice between explicitly authorising read/write invitations and reviewing an organisation route for true read-only access. The request for read access is not permission to broaden it to write.
+
 ## 22 November 2026 — Identity verification claim cross-checked
 
 **Changed / why:** Owner reported the cousin/site owner completed verification before this project. Rechecked the existing signed-in AdSense publisher against the website seller line, Home, Verification check and the linked India payments account. Live UI still reports identity Needs attention, a payments hold and a 21 December serving deadline. [Dated observations and limits](reports/adsense-identity-check-2026-11-22.md).

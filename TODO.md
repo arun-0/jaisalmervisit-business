@@ -16,6 +16,7 @@ Statuses: **Ready** = executable; **In progress** = started; **Owner action** = 
 | T06 · 6 | **Ready — Measurement validation.** Code shipped, fresh outcomes not checked. | Check stream/timezone, country/device mix, consented acquisition/events and internal traffic; reconcile clicks with completed outcomes, net commission/payout and effort. | Validate [audience assumptions](strategy/roadmap.md#audience-and-market); historical GA4 isn't repaired. Register dimensions only if useful. |
 | T07 · 7 | **Ready — Qualified acquisition/content quality.** New-guide demand unmeasured. | Use clean available demand data. Fix Sam campfire-image/dunes-alt mismatch; check mixed/weak listings and local facts before commercial featuring. | Re-rank by expected return. No quotas, unapproved live-record changes or operator outreach. |
 | T08 · 8 | **Backlog — Useful review/automation.** Revenue uplift not established. | Review mature outcomes; automate repeated link checks/reporting/reconciliation when useful. | No schedule without a scheduling request. Dates/counts are not hard stop rules. |
+| T09 · Owner request | **Owner choice — Cousin GitHub access.** Requested read-only access for `jaisalmer-visit` to both repositories. Account exists; neither repository currently grants it access. | Personal private repositories only support collaborator read/write. Choose explicit approval for read/write invitations, or separately review an organisation transfer for genuine read-only roles. No invitation sent. | Read-only request does not authorise write access or an ownership transfer. Ask once for the route; resume on owner answer. [GitHub limitation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/permission-levels-for-a-personal-account-repository). |
 
 ## Approval ledger
 
@@ -25,6 +26,7 @@ Statuses: **Ready** = executable; **In progress** = started; **Owner action** = 
 | 22 Nov | “Go ahead with Viator and personalised ads … Prepare the setup for review” | Chosen directions and preparation authorised. Does not mean signup terms were accepted, private fields were furnished, a Google message was published or guide ads were enabled. |
 | 22 Nov | India-first audience direction | Audience direction accepted; the assumption and validation limits are maintained in [strategy](strategy/roadmap.md#audience-and-market). |
 | 22 Nov | Reorganise docs and add a universal documentation rule | Current business documentation cleanup and local Codex global guidance authorised. Other existing project repositories are not being rewritten in this task. |
+| 22 Nov | Grant `jaisalmer-visit` read access to both repositories | Read-only sharing authorised; GitHub personal-repository limitation prevents that exact role. Write access and ownership transfer remain unapproved; T09 awaits the route. |
 
 ## Recently completed
 
