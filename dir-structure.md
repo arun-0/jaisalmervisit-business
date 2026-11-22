@@ -4,7 +4,7 @@ Updated 22 November 2026. [Jaisalmer Visit](https://jaisalmervisit.com/) is a mo
 
 ## Read these top-level files
 
-You do not need to read every document. For a quick owner catch-up, read this page and TODO. For reasons behind a decision, open the relevant WORKLOG entry. Before an assistant starts work, it also reads AGENTS and the next prompt.
+The human reading path is **this page → TODO → NEXT-PROMPT**: understand the project, see current actions, then see how to continue with AI. Completing the owner steps in TODO also moves the project forward. If you only want a status check, the first two suffice. For reasons behind a decision, open the relevant WORKLOG entry. Assistants additionally load AGENTS and relevant history before work.
 
 | File | Its distinct question / purpose |
 |---|---|
@@ -14,7 +14,7 @@ You do not need to read every document. For a quick owner catch-up, read this pa
 | **[AGENTS.md](AGENTS.md)** | How must assistants work, respect approvals and maintain these records? Rules, not a project-status summary. |
 | **[NEXT-PROMPT.md](NEXT-PROMPT.md)** | How do we resume in the right app/project/model, with what exact prompt and stopping point? Reusable six-part setup. |
 
-These five files live directly in the **business repository root**, `C:\dev\ai\ghanu-jaisalmer-visit\business`. Each owns one job and links to detail; “independent” does not mean copying all project facts into each file. `README.md` is the conventional discovery pointer, `HANDOFF.md` preserves earlier entry links, and `CLAUDE.md` imports the shared assistant rules. They add no separate state or mandatory reading.
+These five files live directly in the **business repository root**, `C:\dev\ai\ghanu-jaisalmer-visit\business`. Each owns one job and links to detail; “independent” does not mean copying all project facts into each file. `README.md` is the conventional discovery pointer and `CLAUDE.md` imports the shared assistant rules. They add no separate state or mandatory reading. There is no separate handoff file: these five records provide the handoff.
 
 ## Where the project lives
 

@@ -2,6 +2,12 @@
 
 Newest first. Live statuses, owner commitments, approvals and follow-up dates belong in [TODO.md](TODO.md); this file records significant events and their meaning. [Project dashboard](dir-structure.md) · [Dated account evidence](reports/revenue-audit-2026-11-21.md).
 
+## 22 November 2026 — Human continuation path and redundant handoff removed
+
+**Changed / why:** Corrected the earlier wording: the human continuation path includes dir-structure, TODO and NEXT-PROMPT. The first two answer a status-only check; NEXT-PROMPT supplies the exact setup for advancing with AI. Owner actions in TODO also advance the project independently. Removed business/HANDOFF.md because it only repeated entry links and had no unique content or current inbound document links. README remains the conventional repository discovery pointer; the five primary records collectively provide handoff.
+
+**Verification / meaning:** Reviewed current business references and companion site entry references; checked all 18 remaining business documents and local links/anchors plus whitespace/diff checks before push. Historical trail references describe the earlier file accurately and remain unchanged; its content is recoverable from Git. Revenue tasks, approvals and website behaviour are unchanged.
+
 ## 22 November 2026 — Start-page reassessment and useful naming
 
 **Assessment / why:** The prior start page covered purpose, journey and dashboard, but left the reading order implicit and buried the continuation prompt. Some legacy filenames described an old calendar/tutorial/plan rather than their current content. Cosmetic hyphen-to-underscore renaming would add churn without improving meaning.
