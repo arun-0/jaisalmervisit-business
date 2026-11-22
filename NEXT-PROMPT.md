@@ -1,6 +1,6 @@
 # Continue the revenue work
 
-Current state is in [TODO.md](../TODO.md), not this prompt. Read [the project entry](../dir-structure.md) and [newest trail entry](../WORKLOG.md) first. Use available evidence and the highest-return unblocked task; preserve the India-first audience plan.
+Current state is in [TODO.md](TODO.md), not this prompt. Read [the project entry](dir-structure.md) and [newest trail entry](WORKLOG.md) first. Use available evidence and the highest-return unblocked task; preserve the India-first audience plan.
 
 | Setup item | Use |
 |---|---|

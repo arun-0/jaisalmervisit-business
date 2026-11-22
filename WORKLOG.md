@@ -2,6 +2,16 @@
 
 Newest first. Live statuses, owner commitments, approvals and follow-up dates belong in [TODO.md](TODO.md); this file records significant events and their meaning. [Project dashboard](dir-structure.md) · [Dated account evidence](reports/revenue-audit-2026-11-21.md).
 
+## 22 November 2026 — Start-page reassessment and useful naming
+
+**Assessment / why:** The prior start page covered purpose, journey and dashboard, but left the reading order implicit and buried the continuation prompt. Some legacy filenames described an old calendar/tutorial/plan rather than their current content. Cosmetic hyphen-to-underscore renaming would add churn without improving meaning.
+
+**Changed:** Added a five-file reading guide and explicit business-root versus parent-workspace distinction. Kept `dir-structure.md`, AGENTS, TODO and WORKLOG; promoted the session setup to top-level `NEXT-PROMPT.md`. Renamed README.txt → README.md for conventional repository discovery, setup/claude-account-setup.md → setup/assistant-portability.md, social/calendar-2026-11-week1-2.md → social/draft-bank.md, and strategy/git-and-hosting-plan.md → strategy/hosting-operations.md. Updated current links and naming rules; historical source URLs still point to the original names at their original commit. HANDOFF and CLAUDE remain compatibility pointers, not additional state stores.
+
+**Verification:** Reviewed the start page against the owner's [2][a]–[e] requirements: durable rule/trail, concise purpose/journey/next prompt, bottom owner dashboard, distinct authoritative homes and reduced duplication. All 19 business documents and their local links/anchors passed validation; `git diff --check` passed. No current local links retain the old paths; historical source URLs intentionally do. No website or monetisation settings change in this unit.
+
+**Meaning:** A human can catch up from the start page and TODO; an assistant also loads rules, relevant history and the exact next prompt. All five primary records are top-level in the shared business repository, with detail linked below. Older filename links outside the repository may need the new names; the Git history is retained.
+
 ## 22 November 2026 — Review preparation and documentation organisation
 
 **Decision:** Owner chose Viator and personalised ads with consent, asking for setup preparation and review rather than claiming activation. Owner also authorised a universal documentation rule and cleanup of the project records, and clarified India-first visitor optimisation (roughly 95% as an assumption to validate, regardless of the owner’s UK location).
@@ -34,7 +44,7 @@ Newest first. Live statuses, owner commitments, approvals and follow-up dates be
 
 **Changed:** Imported separate private business/site repositories, shipped 35 editable static guides and the 37-URL sitemap, removed repeated/demo partner output and added image descriptions. Improved delayed/offline/stalled public-data loading and guide-link contrast. Moved the static frontend to Cloudflare Pages while retaining Firebase services/fallback.
 
-**Evidence:** Source import `65451b9`, business seed `f68e2a5`; guide release `3fd8ad8` with verified deployment `d763e7bf`. Automatic checked main deployment followed in PR 5/main `b64961b`, run `44943644703`, deployment `4aab1457`. Domain/rollback details are in [hosting notes](strategy/git-and-hosting-plan.md).
+**Evidence:** Source import `65451b9`, business seed `f68e2a5`; guide release `3fd8ad8` with verified deployment `d763e7bf`. Automatic checked main deployment followed in PR 5/main `b64961b`, run `44943644703`, deployment `4aab1457`. Domain/rollback details are in [hosting notes](strategy/hosting-operations.md).
 
 **Meaning:** Main pushes deploy after checks, so site publication needs the applicable concrete authorisation. Firebase billing was confirmed handled. Direct Upload/CI was chosen after Cloudflare Git integration failed, not because the backend moved.
 

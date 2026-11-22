@@ -6,7 +6,7 @@ Social is an optional revenue/acquisition route, not a standing publishing sched
 
 Choose a traveller question and a useful destination page or approved booking route. Prefer India-first mobile content, local facts, clear language and permitted media. Compare qualified visits, commercial actions/outcomes and production/response time. Cross-post only where it earns back the effort; don't create activity simply to fill a calendar.
 
-Candidate themes: practical place details, realistic itineraries, safari/camp comparisons, inclusion/transport mistakes, and local food/craft stories. Treat legends as legends. Paid features need disclosure; a listing is not proof of endorsement or referral terms. [Unscheduled draft bank](calendar-2026-11-week1-2.md).
+Candidate themes: practical place details, realistic itineraries, safari/camp comparisons, inclusion/transport mistakes, and local food/craft stories. Treat legends as legends. Paid features need disclosure; a listing is not proof of endorsement or referral terms. [Unscheduled draft bank](draft-bank.md).
 
 Use an existing relevant channel and its actual supported tools. Media/music rights, current account access and the final caption/link matter. Publication, messages, collaborations and spend need their applicable authorisation. Don't promise a staffed WhatsApp booking desk or fast response unless someone has agreed to operate it. Evidence/private-input handling is in [owner inputs](../setup/owner-inputs.md).
 

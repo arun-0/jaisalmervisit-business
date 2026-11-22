@@ -1,6 +1,6 @@
 # Unscheduled social draft bank
 
-Imported November 2026 ideas, cleaned on 22 November. The filename is retained for existing links; **this is not a calendar, publishing approval or claim that posts ran**. Channel process/profile copy lives in [social-media-plan.md](social-media-plan.md); task selection is in [TODO](../TODO.md).
+Imported November 2026 ideas, cleaned on 22 November. Renamed from the old dated calendar because these drafts have no scheduled dates. **This is not publishing approval or a claim that posts ran**. Channel process/profile copy lives in [social-media-plan.md](social-media-plan.md); task selection is in [TODO](../TODO.md).
 
 | Idea | Useful angle / asset | Check before a final draft |
 |---|---|---|

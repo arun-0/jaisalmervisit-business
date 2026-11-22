@@ -1,6 +1,6 @@
 # Current work queue
 
-Updated 22 November 2026. This file owns live status, dependencies and owner commitments. [Start/dashboard](dir-structure.md) · [Strategy](strategy/roadmap.md) · [Next prompt](setup/chatgpt-workflows.md) · [Setup for review](setup/revenue-setup.md).
+Updated 22 November 2026. This file owns live status, dependencies and owner commitments. [Start/dashboard](dir-structure.md) · [Strategy](strategy/roadmap.md) · [Next prompt](NEXT-PROMPT.md) · [Setup for review](setup/revenue-setup.md).
 
 Statuses: **Ready** = executable; **In progress** = started; **Owner action** = needs the named owner input; **Review** = concrete prepared result; **Waiting** = external result/date; **Backlog** = not selected; **Done** = evidence recorded. Prefer the highest-return unblocked work; a blocked row does not block the whole queue.
 
@@ -30,6 +30,7 @@ Statuses: **Ready** = executable; **In progress** = started; **Owner action** = 
 
 | Result | Evidence |
 |---|---|
+| Shared-record cleanup and entry/naming reassessment | Five top-level records, clarified reading order and updated links; [22 Nov trail](WORKLOG.md). Revenue task priorities and approvals unchanged. |
 | 35 crawlable guides, deployed site and automatic checked releases | WORKLOG milestone trail; technical commands in site README. |
 | Four commercial-guide improvements and analytics fixes | Site PR 6, main `2939ebb`; production checks passed. |
 | Search Console ownership and sitemap submission | Site PR 7, main `c427046`; verification/live-fetch evidence in the audit. Processing remains T04. |

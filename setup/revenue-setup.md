@@ -92,4 +92,4 @@ The separate analytics choice should say what accepting it actually does, withou
 
 ## Continue this preparation
 
-Use the [six-part session setup and prompt](chatgpt-workflows.md). Status/next owner check lives in TODO; this pack contains the exact execution detail and does not maintain a second status table.
+Use the [six-part session setup and prompt](../NEXT-PROMPT.md). Status/next owner check lives in TODO; this pack contains the exact execution detail and does not maintain a second status table.
