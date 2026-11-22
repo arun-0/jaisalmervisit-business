@@ -2,6 +2,14 @@
 
 Newest first. Live statuses, owner commitments, approvals and follow-up dates belong in [TODO.md](TODO.md); this file records significant events and their meaning. [Project dashboard](dir-structure.md) · [Dated account evidence](reports/revenue-audit-2026-11-21.md).
 
+## 22 November 2026 — Write access approved with owner-controlled main
+
+**Decision:** Owner approved cousin `jaisalmer-visit` receiving read/write access to both repositories, with only owner `arun-0` updating main directly and other contributors using pull requests. This supersedes the earlier read-only request.
+
+**Evidence / blocker:** Authenticated as `arun-0`, confirmed administrator capability, private repositories and default main branches. Both repositories returned HTTP 403 for both ruleset and classic branch-protection endpoints, explicitly requiring GitHub Pro or public visibility. Pending invitation lists were empty. Account-plan metadata was unavailable through the current token, so no particular billing plan is claimed beyond the feature rejection. GitHub's documented private-repository plan limitation corroborates the error.
+
+**Changed / meaning:** Recorded the owner-only main policy in shared rules and prepared the exact restrict-updates/admin-owner bypass sequence in [hosting operations](strategy/hosting-operations.md#collaboration-and-main-branch-control). No invitations were sent because granting write before enforcing the attached main restriction would violate the requested outcome. No billing, visibility, ownership or protection setting changed. T09 waits for plan capability, not another write-access approval; normal owner-authenticated record commits remain authorised. Local link/anchor and diff checks passed before push.
+
 ## 22 November 2026 — Cousin repository access checked
 
 **Request / evidence:** Owner requested read access for cousin's GitHub account `jaisalmer-visit` to both private repositories. Authenticated GitHub API confirmed the account, both repositories owned by personal user `arun-0`, administrator capability for the current operator and no existing collaborator permission for the cousin. [GitHub's documented personal-repository roles](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/permission-levels-for-a-personal-account-repository) only allow collaborator read/write, not read-only.

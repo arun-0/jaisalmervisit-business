@@ -33,3 +33,16 @@ Historical authoritative nameservers: `hugh.ns.cloudflare.com`, `stella.ns.cloud
 For a bad static release, prefer the prior known-good Pages deployment. If Firebase recovery is necessary and authorised, first confirm its old origin is usable, then restore the two historical DNS-only web records. Recheck apex/www, a guide, `/admin/`, ads.txt, sitemap and public Firestore loading, allowing for DNS/cache propagation. Do not alter unrelated records. [Cloudflare custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/).
 
 Keep `public/google10227309e0228ef3.html` in future site releases to retain Search Console ownership. The static site has a real 404, admin noindex and public canonical/sitemap checks. Private admin sign-in, uploads, live form submissions, ad fill, account collection and revenue are distinct operational checks; passing a static release does not establish them.
+
+## Collaboration and main branch control
+
+Apply to both `arun-0/jaisalmervisit-business` and `arun-0/jaisalmervisit-site`. The owner authorised `jaisalmer-visit` (cousin) as a write collaborator, with only `arun-0` able to update/merge `main`. Other collaborators push topic branches and submit pull requests. The assistant may use existing owner authorisation/credentials for normal owner operations; this is not a delegation to another collaborator.
+
+Prepared enforcement sequence:
+
+1. Confirm rulesets are available for these **private** personal repositories. [GitHub plan support](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets) requires a suitable paid plan for private-repository rulesets. Billing remains an owner action; do not change visibility to obtain a feature.
+2. Confirm repository ownership/admin roles still make `arun-0` the only person with administrator bypass. For each repository create an **active branch ruleset**, name `Owner-controlled main`, target exactly `refs/heads/main`, with **Restrict updates** enabled. Give **repository administrator** bypass **Always allow**, only while that role corresponds exclusively to the owner. Do not give Write/Maintain or the cousin bypass. This permits owner direct updates and owner PR merges while preventing collaborator main updates/merges. Do not merely require a PR, which by itself would not reserve merges to the owner. Use a supported explicit owner actor if available instead, after validating its identity.
+3. Read the saved ruleset and effective rules for main back through GitHub; verify active enforcement, branch condition and bypass scope. Preserve existing checks and automatic site deployment. No need to push test content to main or impersonate the cousin to test.
+4. Only after protection is confirmed, invite `jaisalmer-visit` with `push`/write on both repositories. Recheck pending invitation permissions; after acceptance recheck effective collaborator permissions. Invitation sent is not invitation accepted. Share normal repository/invitation links; no tokens.
+
+Rule/approval ownership is in [AGENTS](../AGENTS.md); live capability, invitation and acceptance state belongs only in [T09](../TODO.md). [Available rule semantics](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets).

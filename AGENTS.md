@@ -21,6 +21,8 @@ Use existing authorised sessions/tools first. Pull before edits, verify proporti
 
 ## Authority and private material
 
+Only repository owner `arun-0` may directly update or merge into `main` in either repository. Other collaborators work on topic branches and open pull requests for the owner to review/merge. An assistant using another collaborator’s credentials must not bypass this policy. Current GitHub enforcement/access status is in T09; a written rule does not prove server-side protection.
+
 Reuse explicit approvals recorded in TODO/worklog; do not ask again merely because a task resumes. Prepare a concrete reviewable result before a necessary final approval. Apply higher-priority action-time rules when relevant. A request to prepare a setup is not a claim that an account, contract, ad setting or public release has been activated.
 
 Outbound posts/messages/operator contact, payments, new account/ad settings and named-domain production/DNS releases need the applicable explicit authorisation. Keep passwords, OTPs, tokens, IDs, banking details, private visitor data and transcripts out of Git/chat. The actual owner/payee handles private/legal submissions; family assistance is not a change of account identity. Do not invent invitations or schedules.

@@ -57,7 +57,7 @@ Snapshot: 22 November 2026. **[TODO.md](TODO.md) is authoritative** if this summ
 | View | Concise result / next step |
 |---|---|
 | Done | Guides and analytics fixes published; Search Console verified/submitted; documentation cleaned and setup pack prepared. [Evidence/trail](WORKLOG.md). |
-| You next | T09: choose the GitHub access route. T01: reconcile the cousin’s prior-verification confirmation with the live AdSense hold. T03: Viator terms/signup/private profile. T02: review the concrete ad batch when ready. [Exact owner checklist](setup/revenue-setup.md#owner-checklist). |
+| You next | T09: enable GitHub plan support for private main protection; write invitations are approved and held until protection works. T01: reconcile the cousin’s prior-verification confirmation with the live AdSense hold. T03: Viator terms/signup/private profile. T02: review the concrete ad batch when ready. [Exact owner checklist](setup/revenue-setup.md#owner-checklist). |
 | Independent AI work | T02: actual regional-consent draft/preview and notice preparation. T06–T07: measurement and targeted content checks. Affiliate preparation can proceed while onboarding waits. [Priority/dependencies](TODO.md). |
 | Blocked / waiting | T04 sitemap processing unresolved. T05 article/“guide” ads OFF pending account, consent, content and rollout review. No paid affiliate links or saved consent draft yet. [Current queue](TODO.md). |
 | Next prompt | [NEXT-PROMPT.md](NEXT-PROMPT.md). Respect recorded owner dates/conditions and existing approvals; a passed date is not proof of completion. |
