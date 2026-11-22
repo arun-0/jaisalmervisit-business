@@ -1,43 +1,35 @@
-# Source, hosting and recovery
+# Hosting and recovery reference
 
-Updated 21 November 2026. Both custom domains are active on Cloudflare Pages. The newest worklog entry records the deployed Git commit and final checks.
+Checked operating arrangement: 21 November 2026. Current release history/evidence is in [WORKLOG](../WORKLOG.md); active problems are in [TODO](../TODO.md). Build/edit/preview/deployment commands have one home: [site/README.md](../../site/README.md).
 
-## Ownership and release
+## System map
 
-| Asset | Current arrangement |
+| Asset | Role |
 |---|---|
-| Website source | Private [arun-0/jaisalmervisit-site](https://github.com/arun-0/jaisalmervisit-site). Baseline `65451b9` imports the engineer’s November 5 snapshot. No earlier Git history was supplied. |
-| Business materials | Private [arun-0/jaisalmervisit-business](https://github.com/arun-0/jaisalmervisit-business). Baseline `f68e2a5` imports the November 20 plan and drafts. Private transcripts, personal memory and exports stay local. |
-| Static frontend | Cloudflare Pages project `jaisalmervisit`, production branch `main`. GitHub Actions publishes the committed public directory after checks pass on a main push, then verifies the release and custom domain. [Pages production](https://jaisalmervisit.pages.dev) |
-| Backend | Firebase project `visitjaisalmer-e3085` serves published visitor data, receives provider enquiries and reviews, authenticates admins, and stores uploaded photos and audio. The owner confirmed billing is handled on 21 November 2026. Backend access can be checked when a selected revenue action requires it. |
-| Recovery origin | Original Firebase Hosting deployment, checked for HTTP 200 on 21 November. Keep it available at least through the initial monitoring period. [Firebase fallback](https://visitjaisalmer-e3085.web.app) |
+| Cloudflare Pages project `jaisalmervisit` | Static frontend at jaisalmervisit.com; checked main pushes upload the committed `public/` directory and verify the deployment/domain. Branch/PR checks do not publish production. |
+| Firebase `visitjaisalmer-e3085` | Firestore visitor data/forms/reviews, authentication and uploaded media. Billing confirmed handled on 21 Nov. Backend rules/live records are separate from a static release. |
+| [Firebase fallback](https://visitjaisalmer-e3085.web.app) | Original hosting origin, checked HTTP 200 on 21 Nov; verify again before using it for recovery. |
+| Separate private repositories | [Site](https://github.com/arun-0/jaisalmervisit-site) contains public source; [business](https://github.com/arun-0/jaisalmervisit-business) contains shared plans/evidence. Seed imports: site `65451b9`, business `f68e2a5`. Earlier source history was not supplied. |
 
-The site’s first release was reviewed, checked and merged in [site PR 1](https://github.com/arun-0/jaisalmervisit-site/pull/1). The checked-out GitHub identity is the owner’s named account. The two checkouts use its GitHub no-reply address because GitHub rejected the first push under the global private-email setting.
+Cloudflare Git integration failed with error 8000011/branch retrieval; Direct Upload and then GitHub Actions provided the release path. This moved the frontend, not Firebase services. Exact delivery/runtime behaviour and test commands are maintained in the site README/code, rather than repeated here.
 
-The Cloudflare GitHub app installation could see the private repository, but branch lookup failed in the dashboard and the Pages API returned 8000011. Direct Upload provided a verified deployment. On the owner's request, GitHub Actions now handles that upload automatically after the release checks pass on a main push. Branch pushes and pull requests run checks. Production uploads run in sequence and skip an outdated main revision. The workflow verifies both the deployment URL and the custom domain.
+## Deployment authority and credentials
 
-The approved Cloudflare account token is named `jaisalmervisit-site-github-deploy` and has Pages Write permission with no expiration. It is stored as the GitHub repository secret `CLOUDFLARE_API_TOKEN`. The account ID is the repository variable `CLOUDFLARE_ACCOUNT_ID`. Cloudflare scopes Pages permission to the account. The `Check and deploy website` workflow has a manual retry option on main. The local release script remains available for previews and an authorised local production release. [Release instructions](https://github.com/arun-0/jaisalmervisit-site/blob/main/README.md) · [Cloudflare continuous integration](https://developers.cloudflare.com/pages/how-to/use-direct-upload-with-continuous-integration/)
+The dedicated account token is named `jaisalmervisit-site-github-deploy`: Pages Write, no expiry, account scope. Its **value** exists only in encrypted repository secret `CLOUDFLARE_API_TOKEN`; the account ID is variable `CLOUDFLARE_ACCOUNT_ID`. Never print either credential flow or commit secrets. Local authorised Wrangler state is under `%LOCALAPPDATA%/JaisalmerVisit/Cloudflare`; another machine uses its own authorised session.
 
-## Cutover and rollback
+Production jobs are serial and skip stale main revisions. The workflow also supports manual retry; local preview/production scripts enforce their own release conditions. A main push publishes, so apply the relevant named-domain approval before merging a release. Recovery is a real production/DNS action, not permission inferred from these notes.
 
-The original authoritative nameservers were `hugh.ns.cloudflare.com` and `stella.ns.cloudflare.com`. On 21 November, before cutover, public DNS and response headers confirmed the two Firebase web targets below.
+## Domain and recovery
 
-| Name | Firebase rollback value | Pages target |
+Only the apex/www web records were changed in the cutover; mail, verification and other infrastructure have their own purposes.
+
+| Name | Current Pages route | Historical Firebase rollback value |
 |---|---|---|
-| Apex `@` | A, `199.36.158.100`, DNS only. Observed answer TTL 300 seconds. | Proxied CNAME to `jaisalmervisit.pages.dev`, Auto TTL |
-| `www` | CNAME, `visitjaisalmer-e3085.web.app`, DNS only. Observed answer TTL 300 seconds. | Proxied CNAME to `jaisalmervisit.pages.dev`, Auto TTL. A zone Single Redirect sends www to the same path on the apex with HTTP 301 and preserves the query string. |
+| `@` | Proxied CNAME → `jaisalmervisit.pages.dev`, Auto TTL | A → `199.36.158.100`, DNS only; observed TTL 300 seconds. |
+| `www` | Proxied CNAME → same Pages host; zone redirect sends path/query to HTTPS apex | CNAME → `visitjaisalmer-e3085.web.app`, DNS only; observed TTL 300 seconds. |
 
-The DNS change applies to those two web records. The domain also has mail, verification and other infrastructure that must be managed on its own terms. A proxied apex usually resolves to Cloudflare IPs because Cloudflare flattens the CNAME. Validate the hostname in Pages and fetch a guide over HTTPS.
+Historical authoritative nameservers: `hugh.ns.cloudflare.com`, `stella.ns.cloudflare.com`. A proxied/flattened apex normally answers with Cloudflare IPs. The enabled zone Single Redirect `Canonical www to jaisalmervisit.com` has rule ID `1523b6041b544e42b2e1d735996cac00`; the site tracks its specification in `deploy/canonical-redirect.json`. It preserves path/query with HTTP 301. Domain forwarding belongs to zone rules, not Pages path `_redirects`.
 
-The enabled zone rule is named `Canonical www to jaisalmervisit.com`, rule ID `1523b6041b544e42b2e1d735996cac00`. Its configuration is tracked in the site repository at `deploy/canonical-redirect.json`. Domain forwarding uses the zone rules engine because Pages `_redirects` supports path rules. HTTPS and the www redirect were checked with a guide path and campaign query parameters.
+For a bad static release, prefer the prior known-good Pages deployment. If Firebase recovery is necessary and authorised, first confirm its old origin is usable, then restore the two historical DNS-only web records. Recheck apex/www, a guide, `/admin/`, ads.txt, sitemap and public Firestore loading, allowing for DNS/cache propagation. Do not alter unrelated records. [Cloudflare custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/).
 
-For a bad static release, use the previous known-good Pages production deployment. To return service to Firebase, confirm the old Firebase homepage is reachable, then restore the two DNS-only records above. Recheck the apex homepage, www redirect, `/admin/`, `/ads.txt`, `/sitemap.xml` and public Firestore reads. During propagation, different resolvers can briefly show different versions. [Cloudflare custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/)
-
-## What was tested
-
-- Six original endpoints matched byte-for-byte between Firebase and the Cloudflare parity preview, including the homepage, privacy, admin, robots, ads and sitemap.
-- The guide release passed checks for 35 guide documents, 37 sitemap URLs, 14 referenced assets, a real 404, noindex on admin, a production canonical on each guide and page content without JavaScript. All 13 public attraction images returned HTTP 200.
-- A local DOM test using published data exercised the two-day planner and Camel Safari deep links. Browser verification on a phone-sized viewport loaded 13 attraction photos, five eligible partner entries and eight transport services, selected the two-day itinerary, opened the fort map and displayed the provider form. An initial content request took about 2.5 seconds. The former 1.5-second startup limit was extended to eight seconds with request cancellation and regression checks for delayed, offline and stalled reads.
-- Admin sign-in, private uploads, live form submissions, ad fill, GA4 collection, Search Console indexing and business revenue need separate owner evidence. SMS is disabled in the source. The release preserved the Firebase rules and data.
-
-For the first two days, the owner can review sitemap processing, landing traffic, ad delivery, reported operator enquiries and actual admin sign-in. If a reader reports a problem, record the exact URL, time, device and symptom. Keep personal traveller details in the business inbox.
+Keep `public/google10227309e0228ef3.html` in future site releases to retain Search Console ownership. The static site has a real 404, admin noindex and public canonical/sitemap checks. Private admin sign-in, uploads, live form submissions, ad fill, account collection and revenue are distinct operational checks; passing a static release does not establish them.

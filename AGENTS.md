@@ -1,23 +1,26 @@
-# Jaisalmer Visit business workspace
+# Jaisalmer Visit working rules
 
-## Shared record
+Read [dir-structure.md](dir-structure.md), [TODO.md](TODO.md) and the newest [WORKLOG.md](WORKLOG.md) entry before substantive work. These records must let the owner, brother or another assistant resume without the chat transcript.
 
-The owner and brother take turns. Start by reading the newest WORKLOG.md entry and summarising what changed. At handover, add a dated entry with work completed, evidence, owner input and the next decision. Provide one WhatsApp line the person may send. Pull before editing and push the agreed changes. Use the configured human Git identity and omit AI attribution from commits.
+## Documentation contract
 
-This private repository holds plans, approved drafts and aggregate reports. The separate site repository holds public website source. Local paths and both GitHub links are in HANDOFF.md. On the brother’s Windows machine, use Git Bash for shell commands, uv for Python and fnm for Node.
+- `dir-structure.md`: the human entry point, file map, concise journey and bottom owner dashboard. Link to detail; do not turn it into another worklog or task list.
+- `TODO.md`: the only current task/status, dependency, owner-action, approval and deferred-follow-up queue. Work the highest-value unblocked item. Respect its check-after dates and conditions; do not repeat a question before it becomes actionable. Passing a date does not mean the owner completed an action.
+- `WORKLOG.md`: the dated trail of what changed, why, evidence and practical meaning. Add an entry for a meaningful decision, implementation, verification, release or handoff; use task IDs instead of copying current task tables.
+- `strategy/roadmap.md`: objective, prioritisation and commercial strategy. `setup/`: execution and private owner-input instructions. `explanations/`: owner-facing meanings and trade-offs. `reports/`: dated evidence. Each fact belongs in its appropriate home; summaries link there.
+- Reconcile these records after meaningful work. Mark recommendations, owner decisions, prepared drafts and published results distinctly. Remove stale duplicated status; preserve significant history in the worklog/Git. Update the directory map after file-role changes.
+- Give a concise six-part setup when recommending a new/resumed/handoff workflow: chat, app, full project path, available model/effort, exact prompt, follow-up/stop point. The reusable setup is [here](setup/chatgpt-workflows.md). Use chat questions here; popup questions have disappeared before the owner could answer.
 
-## Business
+## Work and verification
 
-Jaisalmer Visit is a mobile-first Jaisalmer guide and local provider directory. The site combines static guide pages with an interactive map, itineraries, audio, Tourist Mode and a provider submission form. The imported code uses human review for submissions with SMS disabled. Firestore, authentication and uploaded media use Firebase project visitjaisalmer-e3085. Check the worklog for the live hosting state. The AdSense publisher is pub-9028150722368329. Confirm actual site approval, ad delivery and revenue in the account.
+Prioritise expected net revenue, traveller usefulness, effort and recurring owner work. Let evidence and owner feedback change the order. Manual pilots and progressive automation are both useful; page counts, review minutes and perfect measurement are not gates.
 
-Rank work by likely revenue, traveller usefulness and owner time. Use local evidence for prices, opening hours, access, images and bookings. Make dates and sources clear. Explain choices plainly.
+Use existing authorised sessions/tools first. Pull before edits, verify proportionately, commit and push relevant work with the configured human identity and no AI attribution. On this Windows machine use Git Bash, uv for Python and fnm for Node. Site code/instructions are in the sibling `site` checkout; use its topic-branch and release process.
 
-The active phase is the 80/20 revenue plan in strategy/roadmap.md. Prioritise opportunities by expected revenue, effort and learning, and continue useful work as the opportunity develops. The owner is available for early review and iterative decisions. Automation is the long-term vision and can grow alongside a practical pilot. Page counts, numbers of changes, review minutes and perfect measurement are not fixed limits or prerequisites. Firebase billing is handled, as confirmed by the owner on 21 November 2026. Recommend the model and reasoning effort for each task.
+## Authority and private material
 
-## Authority and privacy
+Reuse explicit approvals recorded in TODO/worklog; do not ask again merely because a task resumes. Prepare a concrete reviewable result before a necessary final approval. Apply higher-priority action-time rules when relevant. A request to prepare a setup is not a claim that an account, contract, ad setting or public release has been activated.
 
-Draft first. Every post, outbound message, contact with an operator, payment, ad or account-settings change needs explicit owner approval. Production hosting and DNS releases need explicit authorisation for the named domain. Give each person a named invitation when ongoing access is needed. Keep passwords, OTPs, card or banking details, tokens, private visitor data and transcript archives outside Git and chat.
+Outbound posts/messages/operator contact, payments, new account/ad settings and named-domain production/DNS releases need the applicable explicit authorisation. Keep passwords, OTPs, tokens, IDs, banking details, private visitor data and transcripts out of Git/chat. The actual owner/payee handles private/legal submissions; family assistance is not a change of account identity. Do not invent invitations or schedules.
 
-Apply authorisations already given and carry the agreed work through. Approval can cover a concrete batch of actions. Ask again when a materially different decision or an applicable action-time rule requires it. Keep preparing and verifying independent work while the owner reviews.
-
-The current plan is in strategy/roadmap.md. The owner-supplied evidence checklist and app/model recommendations are in setup/. Historical Claude setup and social drafts remain available as references. Both collaborators should be able to recover the business context from the repositories.
+Use the [site README](../site/README.md) for runtime/build behaviour and [hosting notes](strategy/git-and-hosting-plan.md) for recovery. Use dated/local sources for travel facts, inventory and prices. Never equate an enquiry with a booking, a loaded ad script with revenue, or sitemap submission with indexing.

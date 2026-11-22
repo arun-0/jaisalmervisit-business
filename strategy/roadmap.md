@@ -1,96 +1,39 @@
-# Jaisalmer Visit revenue plan
+# Revenue strategy
 
-Updated 21 November 2026 after the owner chose an 80/20 phase focused on revenue with little recurring work. Firebase billing is handled, as confirmed by the owner.
+Grow net revenue from jaisalmervisit.com while keeping the guide useful and recurring owner work reasonable. [Current work/status](../TODO.md) · [Evidence](../reports/revenue-audit-2026-11-21.md) · [Project dashboard](../dir-structure.md).
 
-## Current phase
+## Audience and market
 
-The objective is to grow net revenue by prioritising the opportunities with the strongest expected return on effort. Rank opportunities by credible revenue after direct costs, setup work, ongoing owner involvement and confidence in the evidence. Use available evidence and reasonable assumptions to act, then improve the estimates as results arrive.
+Optimise the main journey for Indians browsing from India. The owner's approximate **95%** share is a planning assumption to validate against clean country data, not a measured baseline. Prefer mobile clarity, INR/total-cost visibility, practical pickup and India-usable booking/payment support; never promise unverified UPI or supplier services. The owner's UK location must not drive visitor targeting or payee/account-country assumptions. Use regional consent handling rather than impose Europe's flow globally; review applicable Indian and other requirements before activation.
 
-Start with the existing website, directory and accounts where they offer quick returns, and pursue additional opportunities when their expected return justifies the effort. The owner is available for review at the beginning and as the work evolves. Keep effort visible as a trade-off. The former limits of three changes and 15 minutes of review were introduced by the assistant and have been withdrawn. Automation is the long-term direction and can grow alongside useful manual work during the pilot.
+## How to choose the next action
 
-The first business commit, `f68e2a5`, already identified the core opportunities. Crawlable pages, ad monetisation, affiliate links and directory income remain useful parts of that plan. The current phase changes their sequence and the amount of recurring work.
+Rank credible incremental revenue after costs, setup effort, handling time and confidence. Start with existing traffic/accounts and purchase intent, but move acquisition, content or direct partnerships forward when they offer better return. The 80/20 principle prioritises effort; it does not impose page counts, review-minute limits or perfect-measurement gates.
+
+| Route | Why it can earn | Principal trade-off |
+|---|---|---|
+| AdSense | Monetises eligible visits without fulfilling bookings. | Account activation, consent, fill and traffic determine real earnings. At the observed audience size, extensive layout experiments are unlikely to be the best first investment. |
+| Self-service activity affiliate | Earns on eligible completed purchases; traveller intent can be stronger on safari/itinerary pages. | Product fit, attribution, cancellation and payout rules; another platform owns checkout. Viator is the selected pilot direction. |
+| Paid directory/direct referrals | An existing willing local partner could beat affiliate economics. | Sales, fulfilment, collection, refunds and reconciliation consume owner time. No paid operator agreement has been supplied. |
+| Qualified acquisition | More relevant visitors can increase both bookings and ad income. | Avoid broad content/social output without a useful demand or distribution case. |
+
+## Commercial discipline
+
+The pre-launch GA4 baseline is small and attribution suspect; see the dated audit, not a forecast. Use sensitivity calculations until observed outcomes exist:
+
+- Ads: eligible views ÷ 1,000 × incremental page RPM.
+- Affiliate: relevant visits × outbound rate × completed-booking conversion × net commission.
+
+Track clicks, qualified enquiries, completed experiences, net commission and collected money separately. Include cancellations, direct costs and owner minutes. Do not describe directory contact links as paid referrals without agreed terms.
+
+Preserve practical guide value and accessible maps/directions. Improve relevant pages from local evidence; do not pad text for ads or hard-code changing inventory/prices. Make commercial disclosure clear.
+
+## Review and automation
+
+Verify technical delivery after releases/activation. Review commercial effects when enough outcomes have matured; roughly 14–28 days from the actual launch is a useful review point, not proof of uplift or a compulsory stop. Manual pilots are acceptable. Automate repeated work when it saves effort or improves reliability; create schedules only when requested.
+
+The seed plan's crawlable URLs, editable guides, metadata, sitemap and partner cleanup have shipped. Broad social quotas, projected follower counts and an owner-run booking desk are not current commitments. [Milestone trail](../WORKLOG.md) · [Social reference](../social/social-media-plan.md).
 
 ## Current priority todo list
 
-Updated 21 November 2026 after the owner requested a durable, ordered queue. This is the authoritative current work order; older audit tables and worklog entries describe their dates. At each subsequent interaction, reconcile the newest WORKLOG entry and this queue, take the highest-value unblocked action, and record the result here. Do not make an owner-dependent item block independent useful work. Re-rank when new revenue evidence changes the trade-off; these priorities are not arbitrary caps.
-
-| Priority | Pending work and current status | Next action / completion evidence | Dependency or owner involvement |
-|---|---|---|---|
-| 1 | **AdSense identity and account activation.** Identity is Not started. On 21 November the owner said a cousin would help tomorrow, **22 November 2026**. This is a plan, not a completed submission. | Owner/payments administrator submits the correct payee's documents privately; record submitted/verified/error status only. Recheck any account restrictions and actual delivery after review. Resolve the ads.txt discrepancy from evidence rather than rewriting a correct file. | Cousin can assist; domain ownership alone does not establish payments-admin access or make the helper the payee. Keep private IDs and banking details out of Git/chat. No reminder or new account access has been created. |
-| 2 | **Consent, visitor experience and homepage ad delivery.** No reviewed Google European regulations message is published. The homepage already loads the publisher script; a live slot was unfilled and historical AdSense delivery was zero. | Prepare the actual supported CMP/message configuration, regional signals, refusal behaviour, analytics compatibility and mobile preview. Explain personalised/non-personalised/limited treatments; review intrusive overlay formats. After the approved setup, verify real serving/reporting without clicking live ads. | Owner is considering the explanation; personalised versus non-personalised preference is **not decided**. Default-denied Consent Mode and “non-personalised” copy do not by themselves establish suitable consent. Prepare independently while identity review is pending. |
-| 3 | **One self-service affiliate route.** Viator is recommended; application brief and candidate inventory are prepared. Owner requested understanding before deciding. **No approval to enrol, terms acceptance, account or paid links yet.** | Use [the affiliate explanation](../explanations/affiliate-pilot-explanation.md), answer questions, then obtain the programme decision. If approved, confirm current country/account eligibility and terms, owner/payee details, genuine partner links, matching inventory, disclosure and placement tracking. Ship the authorised integration and track completed experiences/net commission. | Owner supplies private legal/payment/tax details directly to the programme and accepts terms. This does not depend on AdSense identity. Avoid a booking API or owner-run booking desk unless the opportunity justifies it. |
-| 4 | **Search Console sitemap processing.** Ownership is verified and sitemap submitted. The report initially says Couldn't fetch, while Google's live URL test at 20:48 GMT on 21 November says the XML is available to Google. | Recheck Sitemaps and processing/indexing reports in a later interaction. If Success appears, record parsed URLs and mark the fetch issue resolved; keep indexing separate. If a specific error appears or the state persists, inspect its details, Google's live fetch and relevant hosting evidence before making changes. | No owner action currently needed. Do not repeatedly resubmit unchanged XML, request indexing of the XML, infer all guides are indexed, or weaken security without evidence. Retain public/google10227309e0228ef3.html. No recurring check was scheduled. |
-| 5 | **Enable suitable guide advertising after review.** Guide Auto ads is deliberately OFF; manual units are unconfigured. The independent loader control is implemented and tested. | Review content eligibility and mobile usefulness, propose suitable guide coverage/placements, apply the approved configuration, rebuild, verify and publish. Distinguish script loading, eligible requests, filled impressions and earnings. | Depends on account/consent/content readiness and the concrete rollout decision. Do not enable every guide automatically or pad text to reach ad thresholds. [What guide ads means](../explanations/advertising-consent-explanation.md#what-guide-ads-remain-off-means). |
-| 6 | **Validate measurement after the published fixes.** Guide clicks and analytics withdrawal/re-acceptance/source isolation are shipped, but new GA4 attribution and conversion outcomes are not validated. | Verify fresh consented acquisition and guide/provider-click events; assess internal/testing traffic. Register custom dimensions only if actually needed. Combine relevant visits, affiliate outbound clicks, completed bookings, cancellations, net commission, payouts and owner time. | Historical GA4 is not repaired by a code fix. A provider click is not a qualified lead or booking. Keep revenue estimates as sensitivity calculations until outcomes exist. |
-| 7 | **Grow qualified traffic and improve conversion using the resulting evidence.** The pre-launch GA4 baseline is small and attribution is suspect. Sam, Khuri and safari guide improvements are live, selected by intent rather than measured guide demand. | Use Search Console queries/coverage and clean landing-page data to prioritise useful answers, internal links and an appropriate booking action. Test targeted acquisition when its expected value beats more ad tuning. Review key guide facts, media descriptions and operator suitability; the Sam image depicts a campfire scene while its current alt text calls it dunes. Check mixed/weak activity listings before featuring them commercially. | Use credible local facts and media rights. No social quotas, broad content expansion or operator outreach by default. Outbound commercial contact remains a separate concrete decision. |
-| 8 | **Review returns and automate useful repeated work.** No revenue uplift or paid affiliate outcome is established. | Review technical delivery as changes settle and commercial outcomes when they mature, roughly 14–28 days from each actual launch where useful. Automate recurring link checks, aggregation or reconciliation when manual repetition justifies it. Keep this queue, owner inputs, worklog and directory reference current. | No scheduled automation without a scheduling request. Calendar dates, page counts and perfect measurement are not stop rules or prerequisites. |
-
-The first queue item can wait for the cousin/owner while preparation on items 2–4 continues. A cheap sitemap status check can be folded into the next session without turning it into a long polling task. This is effort prioritisation, not a requirement to complete every row before touching the next.
-
-## What “guide ads remain OFF” means
-
-Guides are the separate place, activity and itinerary articles, such as `/places/sam-sand-dunes` and `/things-to-do/camel-safari`. The homepage at `/` is a separate interactive experience.
-
-In `site/content/advertising.toml`, `auto_ads = false` and `slots = []`. Generated guides therefore omit the AdSense publisher loader and manual placements. Guide text, maps and operator links still work. The homepage retains its existing publisher script and the account's Auto ads setting is ON; neither proves a filled ad or earnings. Priority 5 above is the explicit follow-up, rather than leaving “OFF” as an unexplained status.
-
-Read [ads, consent and visitor experience](../explanations/advertising-consent-explanation.md) and [the affiliate pilot](../explanations/affiliate-pilot-explanation.md) for the owner's decision explanations. These recommendations are not owner approvals.
-
-## Already delivered and evidence
-
-Site PR 6/main 2939ebb published the four commercial-guide improvements and consent/source fixes. PR 7/main c427046 added the retained Search Console ownership file. Both deployments and production checks passed for 35 guides, 37 sitemap URLs and 14 referenced assets. Search Console URL-prefix ownership is verified and the sitemap is submitted. Do not repeat those completed setup/release steps.
-
-The [revenue audit](../reports/revenue-audit-2026-11-21.md) records the signed-in account findings and rollout evidence. AdSense marks the site Ready and Auto ads ON, but its Last 30 days report recorded zero delivery/earnings. Identity was Not started, ads.txt was Not found despite correct public responses, no Google European regulations message was published, and a live homepage slot was unfilled.
-
-GA4 recorded 176 sessions, 403 views and 43 active users for 24 October–20 November, with suspect attribution to internal UI event origins. The 35 guides launched after that window. Clean future data and actual bookings should refine the queue; the baseline does not support a large passive-income forecast.
-
-## Revenue routes and evaluation criteria
-
-| Candidate | Smallest useful action | Evidence and owner effort | Decision |
-|---|---|---|---|
-| Recover earnings from existing ad-eligible visits | Inspect AdSense approval, actual delivery, page traffic, exclusions and the guide-template loader. Prepare the smallest suitable integration for eligible guides. Assess Auto ads and one controlled experiment if the account and content support them. | Existing account access, current settings and a recent complete reporting window. Engineering should handle integration and verification. The owner approves the concrete ad setting or publication. | Ship a demonstrated missing integration or test one supported setting. Compare total earnings, page RPM and usability. Low traffic means the absolute upside may be small. [Google setup](https://support.google.com/adsense/answer/9261307) · [Auto ads experiments](https://support.google.com/adsense/answer/9726342) |
-| Add booking paths on pages closest to a purchase | Use approved affiliate programmes or partners with agreed terms. Add relevant booking actions wherever visitor intent and bookable inventory match. Use clear commercial disclosure and link-level tracking. | Confirm programme access, current Jaisalmer inventory, attribution, commission, cancellations and who handles the booking. Compare self-service and direct referrals by return and handling effort. | Use completed bookings and realised commission as the outcome. A commission is contingent on the programme's rules and the activity taking place. Affiliate links were already in the seed plan. [Programme mechanics example](https://partner.getyourguide.support/hc/en-us/articles/13981068165917-Our-partner-program) |
-| Improve pages with commercial opportunity | Use available search, landing-page data and traveller needs to put page improvements in priority order. Fix weak titles, missing answers, internal links and relevant booking actions. Check sitemap submission and coverage. | Recent queries, page visits and local facts help prioritisation. Sam, Khuri, camps, safaris and itineraries are candidates until their demand is measured. Make reasonable, reversible improvements while collecting more evidence. | Measure qualified visits and earnings as the changes mature. Extend useful improvements across the site when justified. Sitemap submission helps discovery and cannot guarantee indexing. [Google Search Central](https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview) |
-
-This order is provisional. If AdSense is healthy and there is strong purchase intent, the booking path may be the best first change. If an existing operator is already willing to pay for a clearly labelled placement and can fulfil the service, compare that opportunity with the affiliate option. Record the sales, collection and support time before choosing.
-
-A direct referral pilot can be worthwhile when its revenue justifies relationship-building and fulfilment work. An owner-run WhatsApp booking desk brings response, availability, cancellation and reconciliation work. Account for those hours in its ranking and automate repeated steps as the process becomes clearer.
-
-## Audit, implement and review together
-
-Use signed-in sessions and authorised connectors first. Gather a recent complete 28-day view where available. Add the prior period when readily accessible. Useful inputs are earnings, ad delivery and page views from AdSense, search queries and coverage from Search Console, and landing-page traffic from GA4. A missing dashboard is an information gap. Continue independent work and request only the access needed for the chosen action.
-
-Keep a ranked opportunity queue. For each item being considered, record the observed problem, proposed change, traffic affected, revenue mechanism, an honest range or unknown, setup work, ongoing owner involvement and the next useful review point. Share an initial recommendation early, incorporate feedback, and continue authorised work. Show the assumptions behind numerical estimates. A provisional estimate is useful when the evidence is incomplete.
-
-For an ad estimate, calculate eligible monthly views divided by 1,000, multiplied by observed incremental RPM. For bookings, use relevant visits multiplied by outbound click rate, completed-booking conversion and net commission. Keep these as sensitivity calculations until there is account data. Account for partner fees, cancellations and collection effort. Use the resulting total revenue and owner minutes together.
-
-Prepare the code or configuration and verify the preview before the final publication or account-setting approval. Reuse the working release process. Revenue-affecting defects justify immediate diagnosis. A larger backend audit is outside this phase unless a selected action depends on it.
-
-## Review and progression
-
-Review the shipped changes after roughly 14–28 days. Ad experiments or booking outcomes may need longer to mature. State whether traffic and completed outcomes are sufficient for a useful conclusion. A calendar date alone cannot establish an uplift.
-
-Continue pursuing worthwhile revenue opportunities and adapt the work with the owner. Phase names help set priorities and organise progress. They do not impose a hard stop. When growth work such as acquisition, content, sales or customer handling offers the best next return, bring it forward and explain the trade-off. Carry lessons from the quick wins into that work while improving existing revenue routes.
-
-The opportunity queue also contains social publishing, further guides, Hindi expansion, X/Threads, directory sales and automation. Prioritise these when there is a useful revenue case. Avoid creating activity quotas simply to fill a calendar.
-
-Review earnings, relevant visits, commercial clicks, confirmed outcomes and owner involvement at intervals useful to the decisions. Automate steps when doing so saves work or improves reliability, including during the pilot. Early manual work is acceptable while the process evolves. A scheduled task requires the owner's scheduling request and the access needed to run it. [Scheduled tasks](https://learn.chatgpt.com/docs/automations?surface=app)
-
-## Changes from the seed plan
-
-Compared with the imported plan at `f68e2a5` and the engineer source at `65451b9`.
-
-| Scale | Seed recommendation or assumption | Current treatment |
-|---|---|---|
-| Completed seed work | Real HTML page per place, itinerary and activity, editable content, metadata, homepage links and sitemap. | Delivered for 35 public records. These are concise launch guides. Further local detail remains editorial work. |
-| Completed seed work | Remove test partners, resolve repeated strip entries and describe images. | Delivered for the partner list and attraction photos, including an admin photo-description field. Decorative background images retain empty alt text. |
-| Major reprioritisation | Substantial social output alongside 40–60 pages in three months. | Concentrate first on monetising existing eligible visits and the top few commercial pages. Content volume and channel expansion enter the later backlog. |
-| Major reprioritisation | Directory sales and an owner-managed enquiry flow become the main revenue opportunity after audience growth. | Compare actual return and owner hours. Start with one self-service booking route or an existing low-maintenance commercial relationship when feasible. Directory sales can win if an operator is ready and the economics work. |
-| Major evidence correction | One ad slot, a much larger directory opportunity and follower targets implied likely revenue outcomes. | Use account revenue, delivery, traffic and completed bookings. The code also has a separate Ad Manager component. No stream's income potential has been established for this site. |
-| Major operational addition | Optional Git-connected Cloudflare move. | Completed using Direct Upload after the Git integration failed. GitHub Actions now checks and automatically publishes main pushes, then verifies the deployment and domain. The local release script remains available. Billing is handled by the owner. |
-| Minor factual corrections | Fourteen attractions, SMS verification active and a new Google Business Profile as a quick win. | The public feed had 13 places. SMS is disabled. Check in-person business eligibility if a profile becomes relevant. [Google eligibility](https://support.google.com/business/answer/13763036) |
-| Additional engineering | The first-visit content deadline and visited guide-link contrast were outside the seed brief. | Fixed after browser verification exposed the two issues. |
-| Workflow correction | Every task was assigned Sol at Extra High based on a temporary session request. | Recommend model and effort for each task. The revenue work starts with GPT-6.2 Sol at Medium. [Model selection](https://learn.chatgpt.com/docs/model-selection) |
-
-## Working materials
-
-The current six-part setup and copy-paste prompt are in [working sessions](../setup/chatgpt-workflows.md). The [owner checklist](../setup/owner-inputs.md) identifies the small initial input packet and optional later channel access. [Hosting notes](git-and-hosting-plan.md) contain rollback and deployment details.
+The live queue moved to [TODO.md](../TODO.md). This heading is retained only so older links still resolve; do not maintain task status here.

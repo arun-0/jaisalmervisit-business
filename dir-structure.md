@@ -1,116 +1,68 @@
-# Business directory reference
+# Jaisalmer Visit — start here
 
-Checked on 21 November 2026.
+Updated 22 November 2026. A mobile-first Jaisalmer guide and local-provider directory at [jaisalmervisit.com](https://jaisalmervisit.com/). The business goal is additional net revenue with useful travel information and reasonable owner effort. **Audience: India-first.** The owner’s planning assumption and validation limits live in [the strategy](strategy/roadmap.md#audience-and-market).
 
-Local folder — `C:\dev\ai\ghanu-jaisalmer-visit\business`
+Project: `C:\dev\ai\ghanu-jaisalmer-visit`. Two sibling private repositories:
 
-Private repository — [arun-0/jaisalmervisit-business](https://github.com/arun-0/jaisalmervisit-business)
+| Checkout | Purpose | Repository |
+|---|---|---|
+| `business\` | Instructions, live todo, decision trail, setup, explanations and evidence | [jaisalmervisit-business](https://github.com/arun-0/jaisalmervisit-business) |
+| `site\` | Public website source, guide Markdown, generated HTML, checks and deployment | [jaisalmervisit-site](https://github.com/arun-0/jaisalmervisit-site) |
 
-This folder contains 17 documents, including this reference, across the root and six subfolders. It holds the shared plans, instructions, drafts and handover records for the owner and brother.
-
-## Directory tree
+## Directory map
 
 ```text
 business/
-├── AGENTS.md
-├── CLAUDE.md
-├── HANDOFF.md
-├── README.txt
-├── WORKLOG.md
-├── dir-structure.md
+├── AGENTS.md                 # how assistants work and maintain records
+├── CLAUDE.md                 # imports AGENTS.md
+├── dir-structure.md          # this owner/AI entry point
+├── TODO.md                   # sole live task/status/owner/dependency queue
+├── WORKLOG.md                # dated changes, decisions, evidence and meaning
+├── HANDOFF.md / README.txt   # short entry pointers
+├── strategy/
+│   ├── roadmap.md            # revenue strategy and prioritisation
+│   └── git-and-hosting-plan.md # operating/recovery reference
+├── setup/
+│   ├── revenue-setup.md      # exact Viator/CMP review pack and owner steps
+│   ├── chatgpt-workflows.md  # six-part session setup and exact next prompt
+│   ├── owner-inputs.md       # evidence/privacy/access reference
+│   └── claude-account-setup.md # portable assistant entry guidance
 ├── explanations/
 │   ├── affiliate-pilot-explanation.md
 │   └── advertising-consent-explanation.md
 ├── reports/
-│   └── revenue-audit-2026-11-21.md
+│   └── revenue-audit-2026-11-21.md # dated account/release evidence
 ├── content/
-│   └── engineer-brief.md
-├── setup/
-│   ├── chatgpt-workflows.md
-│   ├── claude-account-setup.md
-│   └── owner-inputs.md
-├── social/
-│   ├── calendar-2026-11-week1-2.md
-│   └── social-media-plan.md
-└── strategy/
-    ├── git-and-hosting-plan.md
-    └── roadmap.md
+│   └── engineer-brief.md     # delivered foundation and remaining editorial brief
+└── social/
+    ├── social-media-plan.md  # optional acquisition approach and profile drafts
+    └── calendar-2026-11-week1-2.md # unscheduled idea/draft bank
 ```
 
-## Root files
+This is the canonical directory reference; retain the established hyphenated filename rather than create a duplicate `dir_structure.md`. Site file/build/runtime details belong in [site/README.md](../site/README.md). Original seeds/private transcripts remain local under `seed-resource/`; they are not active project instructions or shared records. Raw exports belong only in ignored private/raw folders when needed.
 
-| File | Function | Current role |
-|---|---|---|
-| [AGENTS.md](AGENTS.md) | Gives assistants the business context and working rules. Covers handovers, Git conventions, revenue priorities, owner review, existing authorisations, privacy, Windows Git Bash, uv and fnm. | The shared instructions for work inside this business checkout. It records that Firebase billing is handled and that effort estimates guide priorities without imposing arbitrary caps. |
-| [CLAUDE.md](CLAUDE.md) | Imports `AGENTS.md` using Claude's `@AGENTS.md` syntax. Contains a comment explaining where shared rules live. | Lets Claude use the same business instructions. Shared changes belong in `AGENTS.md`. |
-| [HANDOFF.md](HANDOFF.md) | Introduces the workspace, links both private repositories, gives their Windows paths and points to the current plan, owner inputs, working-session prompt and hosting notes. | Orientation for someone joining or resuming the project. |
-| [README.txt](README.txt) | Provides a short entry point to `HANDOFF.md`, `WORKLOG.md` and the roadmap. Identifies the original handoff materials' location. | A brief introduction suitable for opening in a basic text editor. |
-| [WORKLOG.md](WORKLOG.md) | Records completed work, verification, unresolved inputs and the next direction, newest entry first. Includes deployment commits, workflow runs and corrections to earlier decisions. | The handover history between the owner, brother and work sessions. Older entries describe the state at their date. Later entries record changes and supersede earlier assumptions. |
-| [dir-structure.md](dir-structure.md) | Shows the directory tree and explains each current file and folder. | This inventory. Update it when files are added, removed or repurposed. |
+## What the project does and how it reached here
 
-## content/
+The interactive homepage supplies maps, itineraries, audio, Tourist Mode and local-provider enquiries. Separate static guides make content reachable at ordinary place/activity/itinerary URLs. Cloudflare serves the website; Firebase still supplies the backend. [Technical operating reference](strategy/git-and-hosting-plan.md).
 
-This folder currently holds the technical content brief that informed the website changes.
-
-| File | Function | Current role |
-|---|---|---|
-| [engineer-brief.md](content/engineer-brief.md) | Preserves the original SEO brief. It requests full HTML pages for places, itineraries and activities, unique metadata, structured data, ordinary links, an automatic sitemap, editable content, ad placements, partner cleanup and image descriptions. | Historical requirements with an updated status paragraph at the top. The 35 launch guides and technical foundations have shipped. Local fact checks, richer copy and the appropriate monetisation integration remain part of the evolving work. |
-
-Published guide Markdown and generated website HTML are in the sibling `site` checkout. This business folder holds the brief and planning context.
-
-## setup/
-
-This folder describes how work is organised and what access or evidence a selected task may need.
-
-| File | Function | Current role |
-|---|---|---|
-| [chatgpt-workflows.md](setup/chatgpt-workflows.md) | Contains the revenue-session setup, app and model recommendation, full project path, exact copy-paste prompt and approach to early review, continued work and handover. | The current reusable revenue prompt. It treats 80/20 as prioritisation, allows scope to evolve with owner feedback and makes automation a progressive objective. |
-| [claude-account-setup.md](setup/claude-account-setup.md) | Preserves the initial Claude setup instructions, including profile text, project instructions, suggested connectors, draft/publish responsibilities and working habits. | Historical reference. Its original paths, product details and workflow assumptions may differ from the current setup. The opening note points to the current working-session document. |
-| [owner-inputs.md](setup/owner-inputs.md) | Lists useful Search Console, GA4 and AdSense evidence, commercial partner or affiliate inputs, and local facts. Also covers optional Instagram, Facebook, YouTube, WhatsApp, Threads, X, Gmail, newsletter and Drive inputs. | A reference for requesting the access or evidence needed for the action being pursued. Available signed-in sessions and reports come first. The full list is not a prerequisite for starting useful work. |
-
-## explanations/
-
-Owner-facing explanations of the pending business choices. These are decision aids, not approval records or the authoritative task queue.
-
-| File | Function | Current role |
-|---|---|---|
-| [affiliate-pilot-explanation.md](explanations/affiliate-pilot-explanation.md) | Explains the Viator referral flow, responsibilities, commission example, effort/risks and recommended link-based pilot. | Helps the owner decide whether to proceed; links to the prepared brief and current roadmap queue. No signup or terms acceptance is implied. |
-| [advertising-consent-explanation.md](explanations/advertising-consent-explanation.md) | Explains personalised, non-personalised and limited ads, storage consent, CMP choices, visitor friction and what guide ads being OFF means. | Supports the ad/consent decision and a mobile-reviewed proposal. Advertising settings remain unchanged. |
-
-## reports/
-
-| File | Function | Current role |
-|---|---|---|
-| [revenue-audit-2026-11-21.md](reports/revenue-audit-2026-11-21.md) | Records the signed-in AdSense/GA4 baseline, search-access gap, live delivery check, ranked revenue actions, affiliate inventory and mechanics, proposed consent rollout, sensitivity estimates and release validation. | The audit and rollout evidence for the revenue pilot; the roadmap now owns the live priority queue. Contains aggregate findings only. |
-
-## social/
-
-This folder contains the original social strategy and reusable draft material.
-
-| File | Function | Current role |
-|---|---|---|
-| [social-media-plan.md](social/social-media-plan.md) | Describes the initial channel priorities, content themes, production ideas and growth assumptions. Includes draft Instagram, Facebook and YouTube profile copy, plus WhatsApp greetings, away messages and quick replies. | A draft/reference bank. The roadmap governs current priorities. The November 14 audience counts, quotas and targets are historical planning assumptions. |
-| [calendar-2026-11-week1-2.md](social/calendar-2026-11-week1-2.md) | Contains ten proposed posts dated November 16–29, including Reel concepts, carousel outlines, captions, calls to action and hashtags. Flags claims that need a local check. | Reusable editorial drafts. The file records proposed content, without establishing that it was published. Dates, factual claims, media rights and commercial references need review when a draft is used. |
-
-## strategy/
-
-This folder holds the current business priorities and technical operating record.
-
-| File | Function | Current role |
-|---|---|---|
-| [roadmap.md](strategy/roadmap.md) | Sets revenue priorities and records what has shipped. Covers ad coverage, booking paths, commercial page improvements, evidence and revenue calculations, owner review, progression and automation. Includes a major/minor comparison with the original seed plan. | The master business plan and authoritative ordered todo queue. It records dependencies, owner commitments, guide-ad meaning, current status and evidence needed to close each item; take the highest-value unblocked action and re-rank as evidence changes. |
-| [git-and-hosting-plan.md](strategy/git-and-hosting-plan.md) | Records repository baselines, Cloudflare Pages, the Firebase backend and fallback, automatic deployment from site main, credential names and permissions, domain records, the www redirect, recovery procedures and completed checks. | The technical operating and recovery reference. It describes the approved deployment credential without storing its secret value. |
-
-## Relationship to the rest of the project
-
-The project root is `C:\dev\ai\ghanu-jaisalmer-visit`.
-
-| Location | Purpose |
+| Milestone | Practical meaning / detail |
 |---|---|
-| `business\` | Shared business plans, instructions, drafts and handovers documented here. |
-| `site\` | Website code, published guide source, generated HTML, assets, checks and deployment workflow. A successful push to that repository's main branch publishes the website through GitHub Actions. |
-| `seed-resource\` | Original supplied website and business handoff snapshots, archives and private reference material. |
+| 20 Nov: shared plans and repository handoff | Owner/brother can collaborate from files. [Trail](WORKLOG.md). |
+| 21 Nov: 35 guides, sitemap, partner cleanup and checked automatic deployment | Crawlable content and repeatable releases exist; this does not prove indexing or income. [Site README](../site/README.md). |
+| 21 Nov: account audit, commercial-guide and analytics fixes | Small measured baseline; monetisation and clean future measurement need follow-through. [Audit](reports/revenue-audit-2026-11-21.md). |
+| 21 Nov: Search Console ownership and submission | Ownership is verified; sitemap processing is still a separate pending result. [T04](TODO.md). |
+| 22 Nov: Viator/personalised-ad direction and clearer records | Prepare setup for review, with private/legal owner actions separated from implementation. [Review pack](setup/revenue-setup.md). |
 
-`reports/` now holds the aggregate revenue audit. Raw exports and private-input locations such as `reports/raw/` and `private/` remain absent; create ignored local storage only when needed and keep private visitor or account material out of Git.
+## Where facts belong
 
-The current business record is distributed by function. `AGENTS.md` holds working instructions, `roadmap.md` holds priorities, `WORKLOG.md` records events and decisions, and `chatgpt-workflows.md` supplies the reusable session setup. Historical briefs and drafts preserve their original context, with current directions supplied by those shared records.
+[TODO](TODO.md) owns current status/commitments/approval conditions; [WORKLOG](WORKLOG.md) explains changes and why; [roadmap](strategy/roadmap.md) explains commercial direction; [setup](setup/revenue-setup.md) gives execution detail; [explanations](explanations/affiliate-pilot-explanation.md) explain concepts; [audit](reports/revenue-audit-2026-11-21.md) supplies dated evidence. This page is a concise derived dashboard, not a second detailed status store.
+
+## Owner dashboard
+
+| View | Concise status / link |
+|---|---|
+| Done | Site foundation and latest guide/analytics changes published; Search Console ownership verified and sitemap submitted. [Trail](WORKLOG.md). |
+| Your next actions | Complete AdSense identity with the correct payee; review Viator terms/signup/private profile; review the concrete ad setup when ready. [Exact owner checklist](setup/revenue-setup.md#owner-checklist). |
+| AI can move now | Prepare India-first affiliate placements and regional consent/notice changes; validate measurement and targeted content. [Ordered queue](TODO.md). |
+| Waiting / deliberately off | Sitemap processing unresolved; guide ads OFF pending the reviewed account/content/consent rollout; no affiliate account/paid links or saved CMP draft claimed. [T02–T05](TODO.md). |
+| Resume | Read this page → TODO → newest WORKLOG entry, then the linked setup. [Exact six-part setup and prompt](setup/chatgpt-workflows.md). Respect deferred dates/conditions; don't ask completed approvals again. |

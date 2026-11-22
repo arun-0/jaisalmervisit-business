@@ -1,70 +1,34 @@
-# Revenue working session
+# Continue the revenue work
 
-Grow Jaisalmer Visit's revenue by tackling the strongest opportunities first, reviewing early with the owner and improving the approach as results arrive. Automation is the long-term vision. Useful manual work can be part of the pilot while repeatable steps become automated.
+Current state is in [TODO.md](../TODO.md), not this prompt. Read [the project entry](../dir-structure.md) and [newest trail entry](../WORKLOG.md) first. Use available evidence and the highest-return unblocked task; preserve the India-first audience plan.
 
-GPT-6.2 Sol at Medium is the starting recommendation for the revenue audit and ordinary implementation work. Reassess the model and effort when the actual work warrants it. This is a task-based recommendation, without a measured cost optimum. [OpenAI model selection](https://learn.chatgpt.com/docs/model-selection)
-
-| Setup | Revenue session |
+| Setup item | Use |
 |---|---|
-| Chat | Fresh chat for the revenue work. Keep its review, implementation and evolving decisions in that same chat while useful. |
-| App | Codex desktop, local, with the available browser and CLI access. |
-| Project and full path | Jaisalmer Visit · `C:\dev\ai\ghanu-jaisalmer-visit`. Shared state is in the `business` and `site` checkouts. |
-| Model and effort | GPT-6.2 Sol · Medium, reassessed when the work requires it. |
-| Exact prompt | Use the copy-paste prompt below. |
-| Follow-up and handover | Review the initial recommendation in the same chat. “Proceed with [the agreed direction], incorporate my feedback and continue the authorised work.” Pause when the owner asks, a genuine blocker needs input, or a consequential action requires approval. Record the current state and next opportunity when handing over. |
-
-## Copy-paste prompt
+| Chat | Same chat for the current preparation, review and acceptance. Use a fresh chat when unrelated accumulated context becomes costly; resume from files rather than a copied transcript. |
+| App | Local Codex desktop for repositories/authorised tools. Owner uses the service's website for private identity, legal and payment submissions. |
+| Project / full path | Jaisalmer Visit — `C:\dev\ai\ghanu-jaisalmer-visit`; `business` and `site` are separate sibling checkouts. |
+| Model / effort | GPT-6.2 Sol · Medium for ordinary setup/reconciliation/implementation. Reassess for an unusually difficult task; this is a practical choice, not a measured cost optimum. |
+| Exact prompt | Copy below. |
+| Follow-up / stop | Review the concrete setup/batch in this same chat; state “Approve [named batch]” or requested changes. Stop before an unapproved consequential action or required private/legal owner step; continue independent work. No arbitrary page/time caps. |
 
 ```text
-Grow revenue for jaisalmervisit.com, starting with the best low-hanging
-fruits and using the 80/20 principle to prioritise effort.
+Continue Jaisalmer Visit's India-first revenue work.
+Read business/AGENTS.md, business/dir-structure.md, business/TODO.md
+and the newest business/WORKLOG.md entry. Read the linked setup for
+the selected task and site/README.md before site changes.
 
-Read business/AGENTS.md, business/WORKLOG.md,
-business/strategy/roadmap.md, business/setup/owner-inputs.md
-and site/README.md. Reuse the saved project state and release process.
+Take the highest-return unblocked task. Honour recorded approvals,
+check-after dates and dependency conditions; don't repeat resolved
+questions or assume a promised owner action happened. Use signed-in
+sessions and authorised tools first. Use the audience assumptions and limits in the roadmap rather than
+treating them as measured analytics.
 
-Rank opportunities by expected net revenue, effort, speed of learning
-and ongoing handling work. Use those trade-offs to choose what to do
-next. Let the scope develop with the opportunity and my feedback.
+Prepare reviewable work, share useful findings early, incorporate my
+feedback and carry authorised implementation through verification and
+publication. Keep independent work moving. Do not ask for private IDs,
+passwords or banking information in chat or accept terms for the owner.
 
-I am available for early review and iterative decisions. Show me your
-initial recommendation while continuing independent useful work.
-Incorporate my feedback and carry the agreed work through implementation,
-verification and publication where authorised. Ask for input when
-there is a real decision, missing access or necessary approval.
-
-Use signed-in browser sessions and authorised tools first. Work with
-available evidence, state assumptions and improve the measurement as
-results arrive. Continue useful work while resolving missing inputs.
-Firebase billing is handled.
-
-Starting leads include AdSense coverage and delivery, relevant affiliate
-or partner booking paths, and search/conversion improvements. The
-homepage currently loads the AdSense publisher script, while the new
-guide pages omit it. Check the current account, code and traffic before
-choosing the appropriate integration. These leads are a starting point;
-pursue other opportunities when they offer a better return.
-
-Use the original Claude plan as the baseline. Distinguish completed
-seed recommendations from your additions and changed priorities.
-
-Prepare and test changes through the normal website entry points.
-Reuse existing authorisations and bring concrete decisions for review.
-Record changes, results, assumptions and open opportunities in the
-business records. Commit and push the relevant work.
-
-Automation is the ultimate direction. Automate repeatable steps where
-useful as the process develops, and use practical manual steps when
-they help the pilot make money or learn. Discuss new recurring services
-or commitments with me when a concrete proposal is ready.
-
-Keep prioritising the best next return as the work evolves. Page counts,
-numbers of changes, weekly review minutes, perfect measurement and
-complete automation are not fixed prerequisites or stopping criteria.
+Update TODO's current state, WORKLOG's change/meaning trail and the
+directory dashboard after material changes. Link detail rather than
+copy it. Verify, commit and push relevant work using the normal process.
 ```
-
-## Learning and automation
-
-Review revenue, relevant visits, commercial clicks, completed outcomes and owner involvement when that information can improve a decision. Choose review intervals according to traffic, experiment maturity and booking timing. Preserve what is working while adjusting weaker approaches.
-
-Look for automation opportunities during the pilot. Repeated deployment, reporting, content updates, lead handling or reconciliation can be automated when doing so earns back the effort. A schedule uses the authorised input sources, identifies its runs and reports missing data. The owner can approve a concrete recurring task when ready. [Scheduled tasks](https://learn.chatgpt.com/docs/automations?surface=app)
