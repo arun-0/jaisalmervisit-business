@@ -2,6 +2,12 @@
 
 Newest first. Live statuses, owner commitments, approvals and follow-up dates belong in [TODO.md](TODO.md); this file records significant events and their meaning. [Project dashboard](dir-structure.md) · [Dated account evidence](reports/revenue-audit-2026-11-21.md).
 
+## 22 November 2026 — First-time bootstrap corrected
+
+**Correction / why:** The contributor prompt started by reading cloned files and named `gh` without a complete installation/login path. Browser GitHub login is not GitHub CLI authentication, and Claude Pro alone does not establish a local checkout. Owner correctly identified this circular prerequisite.
+
+**Changed / meaning:** Added a standalone bootstrap prompt to NEXT-PROMPT that needs no repository files and stops at verified setup before project edits/pushes. Expanded the existing assistant-portability setup with tool checks, official GitHub CLI install, private web login as jaisalmer-visit, identity/credential-helper verification, conditional sibling clones and Claude Code startup. The subsequent contributor prompt still owns actual work. Verified command syntax against official GitHub/Claude documentation and checked local links/anchors and whitespace before pushing. No installation, login or clone on the cousin's computer is claimed.
+
 ## 22 November 2026 — Owner/Codex and cousin/Claude turn-taking workflow
 
 **Decision / why:** Owner and cousin will take turns, with pushed work visible to the next assistant. Fetching main alone misses unmerged contributor work, so the shorthand “pull latest and do next” now explicitly inspects both repositories and incoming PRs before task selection. Main remains owner-controlled; the contributor stops at review-ready branches/PRs.

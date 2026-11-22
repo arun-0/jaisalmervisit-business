@@ -8,18 +8,46 @@ Use **local Claude Code**, included with Claude Pro when signed in with that sub
 
 On his own Windows machine, the recommended layout is `C:\dev\ai\ghanu-jaisalmer-visit\business` and sibling `site`. If that location already has either checkout, inspect/reuse it rather than clone over it. If he uses a different OS/location, choose the actual full path and report it; the owner's Windows path does not prove a path exists elsewhere.
 
-For a new Windows layout, run in **Git Bash**, one command per line:
+## Before cloning: tools and GitHub login
+
+`gh` is **GitHub CLI**, a separate local program. Signing into GitHub in Chrome does not automatically authenticate it; Claude Pro does not install or log it in. On the cousin's machine, install [Git for Windows](https://git-scm.com/install/windows) if needed to obtain Git Bash, and open Git Bash. Check `git --version` and `gh --version` before installing anything.
+
+If GitHub CLI is absent and WinGet is available, run this in Git Bash:
+
+```bash
+winget install --id GitHub.cli --exact --source winget
+```
+
+Alternatively use GitHub's [official installer](https://github.com/cli/cli/releases/latest). Close/reopen Git Bash after installation so PATH refreshes, then confirm `gh --version`. If the existing install isn't found, locate/fix PATH rather than reinstall blindly. Use equivalent official setup on another OS.
+
+Authenticate independently of Chrome:
+
+```bash
+gh auth login --hostname github.com --git-protocol https --web
+gh api user --jq .login
+gh auth setup-git
+```
+
+Complete the browser/device flow privately as **jaisalmer-visit**. The identity command must print that login. If another account or an overriding environment credential is active, resolve the mismatch without printing credentials or reusing arun-0's session. Never send passwords, device codes, OTPs or tokens to an assistant. [Official login flow](https://cli.github.com/manual/gh_auth_login) · [Git credential helper](https://cli.github.com/manual/gh_auth_setup-git). Setup is not verified just because public cloning works.
+
+Install Claude Code from its [official setup](https://code.claude.com/docs/en/setup) if absent, then sign in with Claude Pro. A missing Windows CLI can be installed through `winget install --id Anthropic.ClaudeCode --exact --source winget`; reopen the terminal and verify `claude --version`. Do not copy the other person's credentials or install an unrelated API key. If Claude Code is already using a separately billed API credential, deliberately select subscription login; Pro does not include separate API billing.
+
+## Clone and start the project
+
+For a **new** Windows layout, run in Git Bash one command per line. Clone each repository only if its target does not already contain a checkout; inspect existing directories rather than execute blindly:
 
 ```bash
 mkdir -p /c/dev/ai/ghanu-jaisalmer-visit
 cd /c/dev/ai/ghanu-jaisalmer-visit
-git clone https://github.com/arun-0/jaisalmervisit-business.git business
-git clone https://github.com/arun-0/jaisalmervisit-site.git site
+gh repo clone arun-0/jaisalmervisit-business business
+gh repo clone arun-0/jaisalmervisit-site site
 cd business
 claude --add-dir ../site
 ```
 
-Install Claude Code from its [official setup](https://code.claude.com/docs/en/setup) if absent, then sign in with Claude Pro. Do not copy the other person's credentials or install an unrelated API key. If Claude Code is already using a separately billed API credential, deliberately select subscription login; Pro does not include separate API billing. Use the existing Git/uv/Node setup where available; only install dependencies actually needed for the chosen task.
+Alternatively, once **local Claude Code** is available, open the empty/existing parent folder and paste the [standalone bootstrap prompt](../NEXT-PROMPT.md#first-session--bootstrap). It checks/installs tools, guides private GitHub login and clones missing checkouts before reading project records. It stops at verified setup. Then say **Setup verified; start my contributor turn using NEXT-PROMPT.md**. This avoids the old circular assumption that the first prompt could read files before cloning them.
+
+Use existing uv/Node installations where available and install only dependencies needed for the selected task. Do not change the configured human Git author; if absent, ask for the cousin's preferred author name/email and set it locally in each repository, not as arun-0 or an AI identity.
 
 The Desktop **Code** tab can also open this business folder locally with the sibling site allowed. `business/CLAUDE.md` imports `AGENTS.md`; the exact prompt explicitly reads the shared records and site rules. Don't assume opening the parent folder automatically discovers every nested instruction. [Claude memory/import behaviour](https://code.claude.com/docs/en/memory#import-additional-files).
 
