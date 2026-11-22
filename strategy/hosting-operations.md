@@ -9,7 +9,7 @@ Checked operating arrangement: 21 November 2026. Current release history/evidenc
 | Cloudflare Pages project `jaisalmervisit` | Static frontend at jaisalmervisit.com; checked main pushes upload the committed `public/` directory and verify the deployment/domain. Branch/PR checks do not publish production. |
 | Firebase `visitjaisalmer-e3085` | Firestore visitor data/forms/reviews, authentication and uploaded media. Billing confirmed handled on 21 Nov. Backend rules/live records are separate from a static release. |
 | [Firebase fallback](https://visitjaisalmer-e3085.web.app) | Original hosting origin, checked HTTP 200 on 21 Nov; verify again before using it for recovery. |
-| Separate private repositories | [Site](https://github.com/arun-0/jaisalmervisit-site) contains public source; [business](https://github.com/arun-0/jaisalmervisit-business) contains shared plans/evidence. Seed imports: site `65451b9`, business `f68e2a5`. Earlier source history was not supplied. |
+| Separate public repositories | [Site](https://github.com/arun-0/jaisalmervisit-site) contains public source; [business](https://github.com/arun-0/jaisalmervisit-business) contains shared plans/evidence. Seed imports: site `65451b9`, business `f68e2a5`. Earlier source history was not supplied. |
 
 Cloudflare Git integration failed with error 8000011/branch retrieval; Direct Upload and then GitHub Actions provided the release path. This moved the frontend, not Firebase services. Exact delivery/runtime behaviour and test commands are maintained in the site README/code, rather than repeated here.
 
@@ -38,11 +38,17 @@ Keep `public/google10227309e0228ef3.html` in future site releases to retain Sear
 
 Apply to both `arun-0/jaisalmervisit-business` and `arun-0/jaisalmervisit-site`. The owner authorised `jaisalmer-visit` (cousin) as a write collaborator, with only `arun-0` able to update/merge `main`. Other collaborators push topic branches and submit pull requests. The assistant may use existing owner authorisation/credentials for normal owner operations; this is not a delegation to another collaborator.
 
-Prepared enforcement sequence:
+Applied on 22 November 2026 after the owner's explicit public-visibility instruction. Both repositories are public; no paid plan or ownership transfer was needed. [GitHub rule semantics](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets).
 
-1. Confirm rulesets are available for these **private** personal repositories. [GitHub plan support](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets) requires a suitable paid plan for private-repository rulesets. Billing remains an owner action; do not change visibility to obtain a feature.
-2. Confirm repository ownership/admin roles still make `arun-0` the only person with administrator bypass. For each repository create an **active branch ruleset**, name `Owner-controlled main`, target exactly `refs/heads/main`, with **Restrict updates** enabled. Give **repository administrator** bypass **Always allow**, only while that role corresponds exclusively to the owner. Do not give Write/Maintain or the cousin bypass. This permits owner direct updates and owner PR merges while preventing collaborator main updates/merges. Do not merely require a PR, which by itself would not reserve merges to the owner. Use a supported explicit owner actor if available instead, after validating its identity.
-3. Read the saved ruleset and effective rules for main back through GitHub; verify active enforcement, branch condition and bypass scope. Preserve existing checks and automatic site deployment. No need to push test content to main or impersonate the cousin to test.
-4. Only after protection is confirmed, invite `jaisalmer-visit` with `push`/write on both repositories. Recheck pending invitation permissions; after acceptance recheck effective collaborator permissions. Invitation sent is not invitation accepted. Share normal repository/invitation links; no tokens.
+| Repository | Active ruleset |
+|---|---|
+| Business | [Owner-controlled main, 27849265](https://github.com/arun-0/jaisalmervisit-business/rules/27849265) |
+| Site | [Owner-controlled main, 27849267](https://github.com/arun-0/jaisalmervisit-site/rules/27849267) |
 
-Rule/approval ownership is in [AGENTS](../AGENTS.md); live capability, invitation and acceptance state belongs only in [T09](../TODO.md). [Available rule semantics](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets).
+Each branch ruleset targets exactly `refs/heads/main`, enforcement **active**, with Restrict creations, Restrict updates and Restrict deletions. Its sole bypass is the explicit **User `arun-0`**, mode **Always allow**; no Write/Maintain role, cousin, administrator-role group or app bypass is granted. The owner can push directly or merge PRs. Other contributors use topic branches and PRs for the owner to merge. Restricting updates prevents contributor merges into main as well as direct pushes; merely requiring PRs would not reserve merges to the owner.
+
+The GitHub API saved/read-back rulesets and effective-main rules confirmed all three restrictions and the sole owner actor before invitations were sent. No cousin impersonation, test main push or production source modification was used to test enforcement. The normal site check/deploy workflow is retained.
+
+For maintenance, recheck public visibility, exact branch condition, active effective rules and the named owner bypass before changing access. Keep raw private exports, credential values and private submissions outside these now-public repositories. Publishing a repo does not publish its encrypted Actions-secret values. Do not add credentials to source or workflow logs. Before a future privacy/ownership change, reassess feature availability and access.
+
+Rule/approval ownership is in [AGENTS](../AGENTS.md); current invitation/acceptance state belongs only in [T09](../TODO.md). Preserve the difference between invitation sent and accepted write access.

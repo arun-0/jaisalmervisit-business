@@ -2,6 +2,14 @@
 
 Newest first. Live statuses, owner commitments, approvals and follow-up dates belong in [TODO.md](TODO.md); this file records significant events and their meaning. [Project dashboard](dir-structure.md) · [Dated account evidence](reports/revenue-audit-2026-11-21.md).
 
+## 22 November 2026 — Public repositories, owner-only main and cousin invitations
+
+**Decision / change:** Owner explicitly authorised making both repositories public to enable main restrictions without a paid upgrade. Applied public visibility, then active exact-main creation/update/deletion rules with only the explicit `arun-0` user able to bypass. Only after read-back verification, sent write invitations to `jaisalmer-visit` for both repositories. Invitations were pending at verification; no effective collaborator write access is claimed yet.
+
+**Verification:** Before publication, reviewed tracked/historical file names and ran Gitleaks 8.30.1 on reachable local Git history (`--all`): business had zero findings; site's three findings were reviewed as Firebase browser configuration, a cache label and public audio download links, not administrator/deployment credentials. Private raw files/seeds/transcripts were not tracked. This is a scoped review, not a guarantee against every possible exposure. GitHub API read-back confirmed public visibility, active rulesets business `27849265` / site `27849267`, all three effective rules and a sole named-user owner bypass; invitations reported write and current public-only permission read. No billing, ownership, DNS, live Firebase or ad changes were made.
+
+**Meaning:** Anyone can read/clone repository contents and history. Cousin can contribute topic branches once invitations are accepted; only the owner can update/merge main. The earlier plan-capability blocker is resolved. T09 now tracks acceptance only. [Operating configuration](strategy/hosting-operations.md#collaboration-and-main-branch-control). Updated current visibility/instruction text; earlier dated private-repository observations remain historical.
+
 ## 22 November 2026 — Write access approved with owner-controlled main
 
 **Decision:** Owner approved cousin `jaisalmer-visit` receiving read/write access to both repositories, with only owner `arun-0` updating main directly and other contributors using pull requests. This supersedes the earlier read-only request.
