@@ -17,7 +17,18 @@ Read [dir-structure.md](dir-structure.md), [TODO.md](TODO.md) and the newest [WO
 
 Prioritise expected net revenue, traveller usefulness, effort and recurring owner work. Let evidence and owner feedback change the order. Manual pilots and progressive automation are both useful; page counts, review minutes and perfect measurement are not gates.
 
-Use existing authorised sessions/tools first. Pull before edits, verify proportionately, commit and push relevant work with the configured human identity and no AI attribution. On this Windows machine use Git Bash, uv for Python and fnm for Node. Site code/instructions are in the sibling `site` checkout; use its topic-branch and release process.
+Use existing authorised sessions/tools first. Pull before edits, verify proportionately, commit and push relevant work with the configured human identity and no AI attribution. On Windows use Git Bash, uv for Python and fnm for Node; on another OS use its authorised equivalent and establish actual paths. Site code/instructions are in the sibling `site` checkout; use its topic-branch and release process.
+
+## Taking turns across two repositories
+
+“Pull latest and do next” invokes this contract for both owner and contributor; identify the active GitHub role rather than infer it from a browser login or Git author. Use `arun-0` for owner operations and `jaisalmer-visit` for cousin contributor operations. Keep the configured human commit identity and never add AI co-author/attribution trailers.
+
+1. Inspect both working trees and branches; fetch both repositories. Preserve local changes/unfinished branches. Fast-forward clean main checkouts only; never reset or overwrite work just to pull. Inspect open PRs in **both** repositories before choosing a task: main alone does not contain unmerged work.
+2. Read the entry, TODO, newest relevant trail and any open-PR handover. Highest-value unblocked work comes next, but do not duplicate a task already underway/under review. Work sequentially by default. If both people intentionally overlap, agree distinct task IDs/files first; an unmerged branch is not a global task lock.
+3. Use a topic branch per coherent turn/task in each changed repository, e.g. `cousin/T07-sam-image` or `owner/T06-measurement`. Task ownership, In progress/Review status and branch/PR links belong in TODO; update WORKLOG with decisions, evidence and meaning. A queue change still in a PR is proposed until merged. Do not invent permanent extra handoff files.
+4. Contributor: verify, commit and push **every changed repository**, then open PRs to main; cross-link the source and business-record PRs when paired. Put task ID, what/why, checks, approvals/dependencies and exact next action in each PR description. Mark work Review/prepared, not merged/published. Leave both working trees clean or explicitly explain any preserved unfinished changes. Stop at the review-ready handover; never merge/push main or deploy independently.
+5. Owner: inspect and review the incoming PRs before starting more work. Run appropriate checks and resolve conflicts without discarding either person's work. Merge only within existing authorisation; hold consequential unapproved changes for a concrete decision. Source first where business completion depends on a site release; verify the authorised deployment, then reconcile/merge the corresponding record changes. Owner credentials and configured bypass are required for main updates; check success instead of assuming PR merge means deployment passed.
+6. Finish with pushed branch/PR or merged commit references, checks, remaining owner/private steps and the exact next action. Current state stays in TODO, decisions/results in WORKLOG, prompts in NEXT-PROMPT. Next person fetches both repositories and checks PRs again; neither chat transcript nor local memory is the shared state.
 
 ## Authority and private material
 

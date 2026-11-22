@@ -4,6 +4,8 @@ Updated 22 November 2026. This file owns live status, dependencies and owner com
 
 Statuses: **Ready** = executable; **In progress** = started; **Owner action** = needs the named owner input; **Review** = concrete prepared result; **Waiting** = external result/date; **Backlog** = not selected; **Done** = evidence recorded; **Needs attention** = a live issue requires reconciliation/action. Prefer the highest-return unblocked work; a blocked row does not block the whole queue.
 
+**At every turn:** fetch both repositories and inspect open PRs before choosing an item. Record active task owner/status and branch/PR links here; the [shared turn contract](AGENTS.md#taking-turns-across-two-repositories) and [role-specific prompts](NEXT-PROMPT.md) govern handover. An unmerged queue change is proposed; it is not a global lock.
+
 ## Ordered tasks
 
 | ID / priority | Status and task | Next action / completion evidence | Dependency / when to revisit |
@@ -31,6 +33,7 @@ Statuses: **Ready** = executable; **In progress** = started; **Owner action** = 
 
 | Result | Evidence |
 |---|---|
+| Turn-taking workflow for owner/Codex and cousin/Claude Code | Shared contract, role-specific prompts and first-time setup pushed; [entry](NEXT-PROMPT.md). Cousin installation/checkout is not claimed complete. |
 | T09 — Public repositories, cousin write access and owner-only main | Both invitations accepted; effective write and sole `arun-0` main bypass verified on 22 Nov. [Trail](WORKLOG.md). |
 | Shared-record cleanup and entry/naming reassessment | Five top-level records, human continuation path including NEXT-PROMPT, redundant HANDOFF removed and links updated; [22 Nov trail](WORKLOG.md). Revenue task priorities and approvals unchanged. |
 | 35 crawlable guides, deployed site and automatic checked releases | WORKLOG milestone trail; technical commands in site README. |

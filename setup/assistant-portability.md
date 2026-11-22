@@ -1,9 +1,34 @@
-# Using another assistant with this project
+# Working from the cousin's Claude Code
 
-The active project entry is [dir-structure.md](../dir-structure.md). Local Claude reads [CLAUDE.md](../CLAUDE.md), which imports the shared [AGENTS.md](../AGENTS.md). Follow those records rather than maintain a separate copy of business rules or state in a profile.
+The same [AGENTS rules](../AGENTS.md) apply to both contributors. [NEXT-PROMPT](../NEXT-PROMPT.md) owns the two six-part setups and exact prompts; [TODO](../TODO.md) owns current work and approvals. Do not maintain another task list in Claude's profile or memory.
 
-For an assistant without filesystem access, provide the current entry, TODO and relevant setup/explanation; identify their date. Do not upload private transcripts, IDs or payment details. Its tool/access capabilities must be checked in that environment, not inferred from this machine's Codex session.
+## First-time checkout
 
-The local Codex global rule is in `C:\Users\arunp\.codex\AGENTS.md`. It is not automatically a global setting for Claude, ChatGPT or another machine. Their instruction mechanism must explicitly adopt the same record contract. Project records remain portable in Git.
+Use **local Claude Code**, included with Claude Pro when signed in with that subscription. A plain Claude chat or a read-only GitHub connection is not this editing/push workflow. Browser sessions and private account access from the owner's computer do not transfer to the cousin's computer.
 
-The original November 20 Claude UI/profile/connector tutorial had stale paths, unmeasured earnings claims and duplicate instructions. Its prior text remains in [Git history](https://github.com/arun-0/jaisalmervisit-business/blob/f03fe41/setup/claude-account-setup.md); it is not current setup guidance. [Current session setup](../NEXT-PROMPT.md).
+On his own Windows machine, the recommended layout is `C:\dev\ai\ghanu-jaisalmer-visit\business` and sibling `site`. If that location already has either checkout, inspect/reuse it rather than clone over it. If he uses a different OS/location, choose the actual full path and report it; the owner's Windows path does not prove a path exists elsewhere.
+
+For a new Windows layout, run in **Git Bash**, one command per line:
+
+```bash
+mkdir -p /c/dev/ai/ghanu-jaisalmer-visit
+cd /c/dev/ai/ghanu-jaisalmer-visit
+git clone https://github.com/arun-0/jaisalmervisit-business.git business
+git clone https://github.com/arun-0/jaisalmervisit-site.git site
+cd business
+claude --add-dir ../site
+```
+
+Install Claude Code from its [official setup](https://code.claude.com/docs/en/setup) if absent, then sign in with Claude Pro. Do not copy the other person's credentials or install an unrelated API key. If Claude Code is already using a separately billed API credential, deliberately select subscription login; Pro does not include separate API billing. Use the existing Git/uv/Node setup where available; only install dependencies actually needed for the chosen task.
+
+The Desktop **Code** tab can also open this business folder locally with the sibling site allowed. `business/CLAUDE.md` imports `AGENTS.md`; the exact prompt explicitly reads the shared records and site rules. Don't assume opening the parent folder automatically discovers every nested instruction. [Claude memory/import behaviour](https://code.claude.com/docs/en/memory#import-additional-files).
+
+Confirm `gh api user --jq .login` reports **jaisalmer-visit** before pushing/creating PRs. If gh is unavailable or unauthenticated, complete his normal GitHub login or use another authorised GitHub tool. Confirm the configured Git author is his human identity; do not substitute arun-0 or add AI trailers. Never paste tokens into chat. Repositories are public, so public cloning alone does not prove authenticated write access.
+
+Select the model/effort and paste the contributor prompt in [NEXT-PROMPT](../NEXT-PROMPT.md#cousin--claude-code). Later short prompts rely on the [shared turn-taking contract](../AGENTS.md#taking-turns-across-two-repositories), not memory of this chat. [Owner-only branch configuration](../strategy/hosting-operations.md#collaboration-and-main-branch-control).
+
+## Scope of portable guidance
+
+The owner's global Codex instructions are local to that machine/tool, not global Claude settings. The shared project rules are portable because they are committed and explicitly loaded. For another tool without filesystem access, provide current entry/TODO/relevant details and their date; check its actual capabilities before expecting edits, tests or PRs. Keep private transcripts, IDs and payment details out of uploads and repositories.
+
+The earlier Claude UI/profile tutorial remains historical in [Git at f03fe41](https://github.com/arun-0/jaisalmervisit-business/blob/f03fe41/setup/claude-account-setup.md); it is not the current workflow.

@@ -12,7 +12,7 @@ The human reading path is **this page → TODO → NEXT-PROMPT**: understand the
 | **[TODO.md](TODO.md)** | What should happen next, who owns it, what is blocked or approved, and when may we ask again? Sole current queue. |
 | **[WORKLOG.md](WORKLOG.md)** | What changed or was decided, why, how was it verified, and what does it mean? Dated trail; read relevant entries. |
 | **[AGENTS.md](AGENTS.md)** | How must assistants work, respect approvals and maintain these records? Rules, not a project-status summary. |
-| **[NEXT-PROMPT.md](NEXT-PROMPT.md)** | How do we resume in the right app/project/model, with what exact prompt and stopping point? Reusable six-part setup. |
+| **[NEXT-PROMPT.md](NEXT-PROMPT.md)** | How do owner/Codex and cousin/Claude Code take their next turn? Exact six-part setups, first prompt and later shorthand. |
 
 These five files live directly in the **business repository root**, `C:\dev\ai\ghanu-jaisalmer-visit\business`. Each owns one job and links to detail; “independent” does not mean copying all project facts into each file. `README.md` is the conventional discovery pointer and `CLAUDE.md` imports the shared assistant rules. They add no separate state or mandatory reading. There is no separate handoff file: these five records provide the handoff.
 
@@ -39,6 +39,8 @@ The homepage supplies maps, itineraries, audio, Tourist Mode and provider enquir
 | `social/` | [Acquisition approach/profile drafts](social/social-media-plan.md) and [unscheduled draft bank](social/draft-bank.md). No publishing approval implied. |
 
 Original seeds/private transcripts remain local under the parent workspace's `seed-resource/`; they are not active instructions or shared records. Keep private/raw exports ignored. Current facts belong in their designated home above; this page carries only a linked snapshot.
+
+**Taking turns:** cousin pushes topic branches and linked PRs; owner’s next turn fetches both repositories and reviews those PRs before starting more work. A push is not a merge or deployment. [Shared contract](AGENTS.md#taking-turns-across-two-repositories) · [Both prompts](NEXT-PROMPT.md) · [Cousin’s first-time setup](setup/assistant-portability.md).
 
 ## Very short journey
 

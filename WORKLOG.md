@@ -2,6 +2,14 @@
 
 Newest first. Live statuses, owner commitments, approvals and follow-up dates belong in [TODO.md](TODO.md); this file records significant events and their meaning. [Project dashboard](dir-structure.md) · [Dated account evidence](reports/revenue-audit-2026-11-21.md).
 
+## 22 November 2026 — Owner/Codex and cousin/Claude turn-taking workflow
+
+**Decision / why:** Owner and cousin will take turns, with pushed work visible to the next assistant. Fetching main alone misses unmerged contributor work, so the shorthand “pull latest and do next” now explicitly inspects both repositories and incoming PRs before task selection. Main remains owner-controlled; the contributor stops at review-ready branches/PRs.
+
+**Changed:** Added one authoritative turn contract in AGENTS, owner and cousin six-part setups/exact prompts in NEXT-PROMPT, and first-time Claude Pro/Code checkout/authentication instructions in the existing assistant-portability setup. Preserved the five top-level records and single TODO. Paired code/business PRs cross-link, carry task/check/dependency/next-action details, and distinguish proposed/merged/deployed outcomes. Browser logins, chats and global tool preferences are not assumed to transfer between machines. No approval for unreviewed production/ad/legal/account changes is inferred.
+
+**Verification / meaning:** Checked current official Claude Pro inclusion, Sonnet 5.5/model selection, Medium effort and CLAUDE imports; availability still must be checked in the cousin's account. Local document/anchor and whitespace checks passed before push. This documentation is ready for either person's next turn, not evidence that the cousin has installed tools, cloned repositories or completed another revenue task.
+
 ## 22 November 2026 — Cousin invitations accepted and access verified
 
 **Observed / resolved:** Inspected existing OS Chrome: GitHub dashboard explicitly welcomed `jaisalmer-visit` while its bell showed no unread notifications. Direct business invitation navigation led to a push-access confirmation. Direct site invitation navigation showed the valid invitation and Accept invitation button despite the empty bell. This establishes that the notification bell was not a reliable acceptance entry point in this session; the underlying notification/email delivery cause was not established. No duplicate invitations or notification-setting changes were needed.
